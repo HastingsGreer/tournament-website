@@ -1,0 +1,33 @@
+html{
+    font-family: sans-serif;
+    background-color: #000000;
+}
+#login-section{
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    background: white;
+    position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+}
+
+#title{
+    font-family: "Times New Roman";
+    font-size: 5em;
+    font-variant: small-caps;
+    color: darkorange;
+    text-align: center;
+    vertical-align: middle;
+}
+#tournament_list{
+    color: white;
+    font-size: 1em;
+}
+#tournamet_list_title{
+    font-size: 2em;
+}
+
+

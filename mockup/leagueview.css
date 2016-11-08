@@ -1,0 +1,43 @@
+#league{
+    font-size: 3em;
+    text-align: center;
+    color: #666666;
+}
+table{
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 0 auto;
+    width:80%;
+    height: 75%;
+    text-align: center;
+    border: 1px black solid;
+    border-collapse: collapse;
+ }
+.header-row{
+    font-size:2em;
+    font-variant: petite-caps;
+    font-weight: bold;
+}
+.team{
+    font-size: 1em;
+    border-bottom: 1px black solid;
+    background-color: #666666;
+}
+td{
+    height: 10%;
+    border-right: 1px black solid;
+}
+.name{
+    font-variant: small-caps;
+    border-right: 1px black solid;
+    width: 50%;
+}
+.w{
+    width: 20%;
+}
+.l{
+    width: 20%;
+}
+.gb{
+    width: 10%;
+}
