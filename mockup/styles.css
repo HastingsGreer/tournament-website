@@ -2,6 +2,9 @@ html{
     font-family: sans-serif;
     background-color: #000000;
 }
+#home_screen{
+    color:#bbbbbb;
+}
 #login-section{
     width: 50%;
     height: 50%;
