@@ -7,9 +7,9 @@
 <body>
 <div id="home_screen">
 <div id="title">Bracket Buster: A Comp Sci Project</div>
-<div><p>Bracket Buster is a web application to track team records for small sports leagues.</p>
-    <p> Bracket Buster allows league organizers to track wins and losses for their teams. It also allows players and
-        fans to see who is leading the league. </p></div>
+<div><p>Bracket Buster is a web application to manage small sports tournaments. It allows league organizers to
+    track wins/losses for their teams and allows players and
+        fans to see who is up next to play and who is leading the league. </p></div>
 <div> Contributors</div>
 <ul>
     <li> Hastings Greer tgreer</li>
@@ -21,29 +21,35 @@
 Website Structure:
 <ul>
     <li>
-        <a href=mockup/index.html> index.html </a>: <br>
-        main page. <br>
-        list links to ongoing tournaments<br>
-        if logged in:<br>
-        --list links to tournaments that you manage<br>
-        --create tournament link<br>
-        if not logged in:<br>
-        --login and create user panels
+        <a href=mockup/index.html> Main Page Mockup </a>lists links to ongoing tournaments.<br>
+        <ul>
+            <li>If logged in:</li>
+        <ul>
+            <li>List links to tournaments that you manage</li>
+            <li>Create tournament link</li>
+        </ul>
+            <li>If not logged in:</li>
+        <ul>
+            <li>Login and create user panels</li>
+        </ul>
+        </ul>
 
     </li>
     <li>
-        view_tournament.html<br>
-        just shows the tournament so far.<br>
-        this page is dynamically generated for each tournament that has been created<br>
-        if logged in:<br>
-        --next to each undecided game there are two buttons so you can tell the website who won that game
+        view_tournament.html shows the tournament so far and is dynamically generated for each tournament that has been created.
+        <ul>
+        <li>If logged in:</li>
+            <ul>
+            <li>Next to each undecided game there are two buttons so you can tell the website who won that game</li>
+            </ul>
+        </ul>
     </li>
     <li>
-        <a href=mockup/create_tournament.html> create_tournament.html</a>:<br>
-        Select N number of competitors (must be a power of two)<br>
-        N textboxes for team names (each initialized to "bye")<br>
-        Create tournament button: this goes to the view_tournament.html for the tournament you just made
-
+        <a href=mockup/create_tournament.html> Create Tournament Page</a> has the ability to select N number of competitors (must be a power of two).
+        <ul>
+            <li>There are N textboxes designated for team names (each initialized to "bye")</li>
+            <li>Create tournament button goes to the view_tournament.html for the tournament you just made</li>
+        </ul>
     </li>
 </ul>
 

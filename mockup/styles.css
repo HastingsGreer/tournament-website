@@ -2,9 +2,20 @@ html{
     font-family: sans-serif;
     background-color: #7BAFD4;
 }
-#home_screen{
-    color:#bbbbbb;
+
+body{
+    font-family: "Calibri", sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 0 auto;
+    max-width:800px;
+    padding: 2em 2em 2em;
 }
+
+#home_screen{
+    color:#FFFFFF;
+}
+
 #login-section{
     width: 50%;
     height: 50%;
@@ -18,8 +29,8 @@ html{
 }
 
 #title{
-    font-family: "Times New Roman";
-    font-size: 5em;
+    font-family: "Overpass";
+    font-size: 4em;
     font-variant: small-caps;
     color: #000000;
     text-align: center;
