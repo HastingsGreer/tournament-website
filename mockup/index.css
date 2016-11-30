@@ -2,3 +2,10 @@
   float:right
   color: #000000;
 }
+
+#back_photo {
+  background-image:url("456595747.0.jpg");
+  background-repeat:no-repeat;
+  background-position: center;
+  width:100%
+}
