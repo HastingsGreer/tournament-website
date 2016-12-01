@@ -1,0 +1,138 @@
+SQL Schema:
+Table tournament:
+Int ID, char[40]  name, int numteams, int numleagues, bool is_in_bracket_play
+
+
+Table team:
+Int ID, int tournamentID, char[40] name, int leagueID, int seed
+
+
+Table league:
+Int ID, int tournamentID, char[40] name, 
+
+
+Table game:
+Int ID, int tournamentID, int team1ID, int team2ID, bool isLeague, int posInTournament, datetime startTime,, int location, int winnerID
+
+
+Table location:
+Int ID, char[40] name, address
+
+
+Table organizers:
+Int ID, char[40] username, char[128] passwordhash
+
+
+Table organizerTournament:
+Int ID, int organizerID, int tournamentID
+
+
+API endpoints:
+All return json
+GET:
+List of tournaments
+	{tournaments : [
+                                          {tournament :“tournament name”,   
+                                          Tournament-id:1234,
+                                           tournament_day:12-23-19}, 
+                                          {...}, {...}..
+                                    .]
+              }
+Get tournament
+            {
+              numteams: 16,
+              numleagues: 4,
+              In_bracket_play: true,
+              tournament_style: “round_robin”,
+              teams: [{team_name:”stallions”,
+                           Team_id:1234,
+                           Team_league,
+                           seed: 3
+                           },
+                           {...},
+                           ...
+                         ],
+              games: {
+                            leagues:[{
+                                             teams_in_league: [1234, 6546, 42234] //team ids
+                                             Games: [{team1: 1234, 
+                                                            team2: 6546, 
+                                                            winner: 1234, 
+                                                            time: 12-23-19 12:00:00
+                                                            Location: “hooker fields”
+                                                            },
+                                                            {team1: 1234, 
+                                                            team2: 6546, 
+                                                            winner: 1234, 
+                                                            time: 12-23-19 12:00:00
+                                                            Location: “hooker fields”
+                                                            },
+                                                            {...}
+                                                         ]
+                                                },
+                                         
+
+
+                            ]
+                            Bracket:[{
+				
+
+
+}
+   ]
+}
+            
+                   
+
+
+POST:
+Add tournament
+            {
+              numteams: 16,
+              numleagues: 4,
+              In_bracket_play: true,
+              tournament_style: “round_robin”,
+              teams: [{team_name:”stallions”,
+                           Team_league,
+                           },
+                           {...},
+                           ...
+                         ],
+              games: {
+                            leagues:[{
+                                             teams_in_league: [1234, 6546, 42234] //team ids
+                                             Games: [{team1: 1234, 
+                                                            team2: 6546, 
+                                                            time: 12-23-19 12:00:00
+                                                            Location: “hooker fields”
+                                                            },
+                                                            {team1: 1234, 
+                                                            team2: 6546, 
+                                                            time: 12-23-19 12:00:00
+                                                            Location: “hooker fields”
+                                                            },
+                                                            {...}
+                                                         ]
+                                                },
+                                         
+
+
+                            ]
+                            Bracket:[{
+				
+
+
+}
+   ]
+}
+Declare a winner of a game (with scores)
+{
+game: [
+	
+	Team1_ID:1234,
+	Team1_Score: 65,
+	Team2_ID:6546,
+	Team2_Score: 77,
+	winner: 1234;
+]
+}
