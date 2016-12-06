@@ -1,0 +1,22 @@
+.h4{
+	text-align: center;
+}
+
+#team_container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: baseline;
+	align-content: center;
+	height: 80%;
+}
+.tournament_card{
+	margin: 1em;
+	padding: 1em;
+	background: white;
+	width: 200px;
+	height: 200px;
+	border: thin black;
+	text-align: center;
+}
