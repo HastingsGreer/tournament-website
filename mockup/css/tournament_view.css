@@ -1,7 +1,14 @@
-.h4{
+.h1{
 	text-align: center;
 }
-
+#login_header{
+	font-size: 1em;
+	background-color: yellow;
+	color: black;
+}
+.right{
+	text-align: right;
+}
 #team_container{
 	display: flex;
 	flex-direction: row;

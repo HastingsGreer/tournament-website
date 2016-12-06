@@ -5,6 +5,9 @@ var Tournament_View = function(){
 	var getTournamentNames = $.getJSON('php/get_tournaments.php', function(json) {
 		tournament_section.innerHTML="";
 		var names = [];
+		if(json.tournament.length==0){
+			tournament_section.innerHTML="NO ONGOING TOURNAMENTS";
+		}
 		for(var i = 0; i < json.tournament.length; i++){
 			console.log(json.tournament[i].name);
 			var tournament = document.createElement('div');

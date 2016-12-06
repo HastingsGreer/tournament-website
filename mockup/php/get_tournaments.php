@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT * FROM tournament";
+$sql = "SELECT * FROM tournament WHERE NOW() BETWEEN start_date AND end_date";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

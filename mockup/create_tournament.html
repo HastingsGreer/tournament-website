@@ -3,6 +3,9 @@
 <title>Bracket Buster!</title>
 
 <link type="text/css" href="create_tournament.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+<script src="js/tournament.js"></script>
+<script src="js/create_tournament.js"></script>
 
 </head>
 <body>
@@ -10,8 +13,9 @@
 
   <form id="new-tournament">
     Create a tournament!<br>
+    Tournament Name: <input type=text name=tournament_name><br>
     Number of Teams:
-    <select>
+    <select id="numTeams">
       <option value=4>4</option>
       <option value=4>8</option>
       <option value=4>16</option>
@@ -19,15 +23,16 @@
       <option value=4>64</option>
       <option value=4>128</option>
     </select><br>
-    Team Name: <input type=text name=team1 value=bye> <br>
-    Team Name: <input type=text name=team2 value=bye> <br>
-    Team Name: <input type=text name=team3 value=bye> <br>
-    Team Name: <input type=text name=team4 value=bye> <br>
-    Team Name: <input type=text name=team5 value=bye> <br>
-    Team Name: <input type=text name=team6 value=bye> <br>
-    Team Name: <input type=text name=team7 value=bye> <br>
-    Team Name: <input type=text name=team8 value=bye> <br>
-    <input type="submit" value="Submit">
+    <div id="team_name_area">
+    Team Name: <input type=text name=team1 value="Enter a team name"> <br>
+    Team Name: <input type=text name=team1 value="Enter a team name"> <br>
+    Team Name: <input type=text name=team1 value="Enter a team name"> <br>
+    Team Name: <input type=text name=team1 value="Enter a team name"> <br>
+    </div>
 
+
+    <input type="submit" value="Submit"> 
+    <!-- Add an on submit feature for validation -->
+    
   </form>
 </body>
