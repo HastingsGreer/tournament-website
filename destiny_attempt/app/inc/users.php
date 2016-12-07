@@ -33,9 +33,29 @@ class BBUser
 	}
 	public static function findByID($id){
 		$mysqli = BBUser::connect();
+		$result = $mysqli->query("SELECT * FROM users WHERE id = " .$id);
+		if($results) {
+			if($result->num_rows == 0){
+				return null;
+			}
+			$user_info = $result->fetch_array();
+			return new BBUser($user_info['id'], $user_info['email'], $user_info['password']);
+		}
+		return null;
+
 	}
 
-	{
+	public static function emailExists($email){
+		$mysqli = BBUser::connect();
+		$result = $mysqli->query("SELECT * FROM users WHERE email = " . mysqli->real_escape_string($email);
+		if($results) {
+			if($result->num_rows == 0){
+				return "Email is available";
+			}
+			$user_info = $result->fetch_array();
+			return "Email taken.";
+		}
+		return null;
 
 	}
 
