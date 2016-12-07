@@ -1,0 +1,85 @@
+html{
+    font-family: 'Maiden Orange', cursive;
+    background-color: #1d2731;
+}
+
+body{
+    font-size: 25px;
+    color: #328cc1;
+    margin: 0 auto;
+    max-width:100%;
+    padding: 2em 2em 2em;
+}
+
+#home_screen{
+    color:#FFFFFF;
+}
+#back_photo {
+    background-image:url("DeanDome.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width:100%;
+    height:900px;
+    background-size:cover;
+}
+
+#login-section{
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(50, 140, 193, .50);
+    position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+    color:#FFFFFF;
+    padding: 15px 15px 15px 15px;
+}
+
+#title{
+    font-family: 'Maiden Orange', cursive;
+    font-size: 4em;
+    color: #d9b310;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#tournament_list_button, #manage_button, #create_button, #rules_button{
+    padding:10px 10px 10px 10px;
+    margin: 10px;
+}
+
+#tournament_list_button, #manage_button, #rules_button {
+    background-color:#0b3c5d;
+}
+
+#create_button{
+    background-color: #d9b310;
+    color: white;
+    text-decoration:none;
+}
+#tournament_list_button:hover, #manage_button:hover, #rules_button:hover{
+    transform:scale(1.1);
+    background-color: #d9b310;
+}
+
+#create_button:hover{
+    transform:scale(1.1);
+    background-color: #0b3c5d;
+}
+
+
+#tournament_list{
+    color: white;
+    font-size: 1em;
+}
+
+#rules_list{
+    background-image:url("Clipboard4Kids.png");
+    background-repeat:no-repeat;
+    background-size:contain;
+    max-width: 45%;
+    height: 900px;
+    position: relative;
+}
