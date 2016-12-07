@@ -7,13 +7,14 @@ var Tournament_View = function(){
 		var names = [];
 		if(json.tournament.length==0){
 			tournament_section.innerHTML="NO ONGOING TOURNAMENTS";
-		}
-		for(var i = 0; i < json.tournament.length; i++){
-			console.log(json.tournament[i].name);
-			var tournament = document.createElement('div');
-			tournament.className = "tournament_card";
-			tournament.innerHTML=String(json.tournament[i].name);
-			tournament_section.appendChild(tournament);
+		}else{
+			for(var i = 0; i < json.tournament.length; i++){
+				//console.log(json.tournament[i].name);
+				var tournament = document.createElement('div');
+				tournament.className = "tournament_card";
+				tournament.innerHTML=String(json.tournament[i].name);
+				tournament_section.appendChild(tournament);
+			}
 		}
 		//return names;
 

@@ -3,17 +3,20 @@
 <title>Bracket Buster!</title>
 
 <link type="text/css" href="create_tournament.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="leagueview.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
 <script src="js/tournament.js"></script>
 <script src="js/create_tournament.js"></script>
 
 </head>
 <body>
-  <div id="title">Bracket Buster</div>
+  <div id="title">Create a Tournament</div>
 
   <form id="new-tournament">
-    Create a tournament!<br>
-    Tournament Name: <input type=text name=tournament_name><br>
+    Tournament Name: <input type=text name=tournament_name required><br>
+    Start Date: <input type=date name=start_date required><br>
+    End Date: <input type=date name=end_date required><br>
     Number of Teams:
     <select id="numTeams">
       <option value=4>4</option>
@@ -23,11 +26,12 @@
       <option value=4>64</option>
       <option value=4>128</option>
     </select><br>
+
     <div id="team_name_area">
-    Team Name: <input type=text name=team1 value="Enter a team name"> <br>
-    Team Name: <input type=text name=team1 value="Enter a team name"> <br>
-    Team Name: <input type=text name=team1 value="Enter a team name"> <br>
-    Team Name: <input type=text name=team1 value="Enter a team name"> <br>
+    Team Name: <input type=text name=team1 value="Enter a team name" required> <br>
+    Team Name: <input type=text name=team1 value="Enter a team name" required> <br>
+    Team Name: <input type=text name=team1 value="Enter a team name" required> <br>
+    Team Name: <input type=text name=team1 value="Enter a team name" required> <br>
     </div>
 
 
