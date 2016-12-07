@@ -2,26 +2,29 @@ html{
     font-family: 'Maiden Orange', cursive;
     background-color: #1d2731;
 }
+
 #header{
     font-family: sans-serif;
     font-size:20px;
     color: #d9b310;
+    background-color: white;
+    display: block;
 }
 #header #brand_text{
-    font-color:;
-    width: 10%;
+    font-color: white;
+    width: 70%;
     display:inline-block;
-    float:left;
+    text-align: left;
+
 }
-#header #control{
-    width: 50%;
-    display:inline-block;
+#header.nav_items{
     float:right;
 }
 #header a{
     text-decoration: none;
+    color: #333333;
 }
-h1{
+/*h1{
     font-size: 32px;
     padding: 0;
     margin: 0;
@@ -75,5 +78,5 @@ form label{
 form input{
     float: right;
 }
-
+*/
 /*END REGISTER PAGE*/

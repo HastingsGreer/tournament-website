@@ -1,14 +1,6 @@
-<html>
-<head>
-    <title>Bracket Buster!</title>
-    <link type="text/css" href="css/login.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Maiden+Orange" rel="stylesheet">
-</head>
+<?php include_once "common/header.php"; ?>
 
-<body>
-<div>
-    <a href="main.php">BracketBuster</a>
-</div>
+<div id="login">
 <div id="back_photo">
     <div id="login-section">
         <div id="title">BRACKET BUSTER</div> <br>
@@ -31,24 +23,8 @@
     </div>
 
 </div>
-
-
-<div id="rules_list">
-
 </div>
 
-<div id="tournament_list">
-    <ol>
-        <li> <a href="tourney1.html"> UNC Club Volleyball 2016</a></li>
-        <li> <a href="tourney2.html"> UNC Club Frisbee 2016</a></li>
-    </ol>
-</div>
+<!--<?php include_once "common/sidebar.php"; ?> -->
 
-<div id="managed_tournament_list">
-    <ol>
-        <li> <a href="tourney1.html"> UNC Club Volleyball 2016</a></li>
-    </ol>
-</div>
-
-</body>
-</html>
+<?php include_once "common/footer.php"; ?>
