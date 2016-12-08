@@ -18,8 +18,8 @@ class Tournament
 
     public static function connect()
     {
-        //return new mysqli("classroom.cs.unc.edu", "tgreer", "horsejump5678", "tgreerdb");
-        return new mysqli("localhost", "root", "", "tournament");
+        return new mysqli("classroom.cs.unc.edu", "tgreer", "horsejump5678", "tgreerdb");
+        //return new mysqli("localhost", "root", "", "tournament");
     }
 
     public static function create($name, $league_id, $num_teams, $start_date, $end_date)
