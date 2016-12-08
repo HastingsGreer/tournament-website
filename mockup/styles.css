@@ -20,7 +20,7 @@ body{
     background-position: center;
     width:100%;
     height:900px;
-    background-size:cover;
+    background-size:cover;    
 }
 
 #login-section{
@@ -52,6 +52,8 @@ body{
 
 #tournament_list_button, #manage_button, #rules_button, #create_account {
     background-color:#0b3c5d;
+    text-decoration:none;
+    color: white;
 }
 
 #create_button{
