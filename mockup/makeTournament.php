@@ -1,5 +1,7 @@
 <?php
-header('Content-Type: application/json');
+$json = file_get_contents('php://input'); $obj = json_decode($json);
+
+
 $id = intval($_GET['id']);
 $teams = array();
 $teamnames = ['Broncos', 'Bulls', 'Wingnuts', 'Gamecocks', 'Ampersands', 'xss', 'tar heels', 'snoot boopers', 'fly balls', 'team chaos', 'cow tippers', 'crazy 8s', 'ballers', 'robots', 'cat-people', 'brainsuckers'];
