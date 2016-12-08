@@ -50,17 +50,18 @@ body{
     margin: 10px;
 }
 
-#tournament_list_button, #manage_button, #rules_button, #create_account {
+#tournament_list_button, #manage_button, #rules_button {
     background-color:#0b3c5d;
     text-decoration:none;
     color: white;
 }
 
-#create_button{
+#create_button, #create_account{
     background-color: #d9b310;
     color: white;
     text-decoration:none;
 }
+
 #tournament_list_button:hover, #manage_button:hover, #rules_button:hover, #create_account:hover{
     transform:scale(1.1);
     background-color: #d9b310;
