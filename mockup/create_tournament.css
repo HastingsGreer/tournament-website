@@ -1,0 +1,24 @@
+#new-tournament{
+    background-color: rgba(255, 255, 255, .60);
+    padding:inherit;
+    width: 450px;
+    font-size:30px;
+    line-height: 1.5em;
+    margin: 0 auto;
+}
+
+#numTeams{
+    font-size:20px;
+}
+
+input[type=text]{
+    font-size: 20px;
+}
+
+input[type=date]{
+    font-size: 20px;
+}
+
+input[type=submit]{
+    font-size: 20px;
+}
