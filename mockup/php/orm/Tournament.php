@@ -28,12 +28,12 @@ class Tournament
         if($start_date == null){
             $sdstr = "null";
         }else{
-            $sdstr = "'" / $start_date->format('Y-m-d') . "'";
+            $sdstr = "'" . $start_date->format('Y-m-d') . "'";
         }
         if($end_date == null){
             $edstr = "null";
         }else{
-            $edstr = "'" / $end_date->format('Y-m-d') . "'";
+            $edstr = "'" . $end_date->format('Y-m-d') . "'";
         }
 
         $result = $mysqli->query("INSERT INTO tournament(name,league_id,num_teams,start_date,end_date) VALUE( " . "'" . $mysqli->real_escape_string($name) . "', "
