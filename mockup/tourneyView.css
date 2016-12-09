@@ -18,7 +18,7 @@ main{
   .round .spacer:last-child{ flex-grow:.5; }
 
   .round .game-spacer{
-    flex-grow:1;
+    flex-grow:2;
   }
 /*
  *  General Styles
