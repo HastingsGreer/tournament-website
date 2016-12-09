@@ -268,6 +268,7 @@ $(document).ready(function(){
 		});
 
 $('.game').on('click', function(e){
+	alert("afadfad");
 	var object = this;
 	
 	var id = this.id
