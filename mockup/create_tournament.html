@@ -12,20 +12,23 @@
 
 </head>
 <body>
-  <div id="title">Create a Tournament</div>
+    <div id="back_photo">
+    
+  <div id="create_title">Create a Tournament</div>
 
+    
   <form id="new-tournament">
+
     Tournament Name: <input type=text name=tournament_name required><br>
     Start Date: <input type=date name=start_date required><br>
     End Date: <input type=date name=end_date required><br>
+      
     Number of Teams:
     <select id="numTeams">
       <option value=4>4</option>
       <option value=4>8</option>
       <option value=4>16</option>
-      <option value=4>32</option>
-      <option value=4>64</option>
-      <option value=4>128</option>
+
     </select><br>
 
     <div id="team_name_area">
@@ -40,4 +43,6 @@
     <!-- Add an on submit feature for validation -->
     
   </form>
+    </div>
 </body>
+</html>
