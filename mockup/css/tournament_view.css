@@ -13,7 +13,7 @@
 	width: 2000px;
 	height: 800px;
 	overflow-y: scroll;
-	display: table-cell;
+	display: inline-block;
 	margin:0 auto;
 	float: left;
 }
