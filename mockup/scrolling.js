@@ -1,4 +1,4 @@
-<script>
+
     $(document).ready(function (){
     $(document).on('click', 'a', function(event){
         event.preventDefault();
@@ -8,4 +8,3 @@
         }, 800);
     });
 })
-    </script>
