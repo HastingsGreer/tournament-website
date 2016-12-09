@@ -68,7 +68,7 @@ body{
 
 #addTournamentButton, #seeAllTourneysButton
 {
-    width: 50%;
+    width: 40%;
 }
 
 #create_button:hover, #create_account:hover{
