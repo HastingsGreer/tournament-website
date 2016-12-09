@@ -1,6 +1,6 @@
 <script>
     $(document).ready(function (){
-    $(document).on('click', 'a', function(event){
+    $(document).rules.on('click', 'a', function(event){
         event.preventDefault();
 
         $('html, body').animate({
