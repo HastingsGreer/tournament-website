@@ -72,8 +72,20 @@ $(document).ready(function(){
 		}
 
 		for(var i=0; i< bracket.length; i++){
-			t1=id2name(bracket[i].team1);
-			t2=id2name(bracket[i].team2);
+			var t1=id2name(bracket[i].team1).team_name;
+			var t1seed=id2name(bracket[i].team1).seed;
+			var t1s=bracket[i].team1Score;
+			var t2=id2name(bracket[i].team2).team_name;
+			var t2s=bracket[i].team2Score;
+			var t2seed=id2name(bracket[i].team2).seed;
+			var bracketpos = bracket[i].bracket_position;
+			if(bracketpos==7){
+				$("#7home").innerHTML=t1seed + " " + t1;
+				$("#7away").innerHTML=t2seed+ " " + t2;
+				$("7hscore").innerHTML=t1s;
+				$("#7ascore").innerHTML=t2s;
+			}
+
 
 			
 			for(var g=0; g<games.leagues[leagueidx].games.length; g++){
