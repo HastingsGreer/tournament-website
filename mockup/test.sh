@@ -1,6 +1,6 @@
 #curl POST -H 'Content-Type: application/json' -d '{"name": "New item", "year": "2009"}' https://wwwp.cs.unc.edu/Courses/comp426-f16/users/tgreer/final_project_milestones/mockup/makeTournament.php
 curl POST -H 'Content-Type: application/json' -d '{
-              "name": "yball horse", 
+              "name": "example_tourney_in_bracket_play", 
               "numteams": 16,
               "numleagues": 4,
               "start_date" : "2013-12-3",

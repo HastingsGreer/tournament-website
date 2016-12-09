@@ -82,10 +82,13 @@ while($game = $gametable->fetch_row()) {
 $games = (object) array("leagues" => $leagues,
                         "bracket" => $lgames);
 
+$tourney = mysqli_query($mysqli, "SELECT name, num_teams, num_pools, is_in_bracket_play, min_rest_for_team  FROM tournament WHERE id = " . $id )->fetch_row();
 $tournament1 = (object) array(
-                              'numteams'=> 16,
-                              'numleagues'=> 4,
-                              'in_bracket_play' => false,
+                              'name' => $tourney[0],
+                              'numteams'=> $tourney[1],
+                              'numleagues'=> $tourney[2],
+                              'in_bracket_play' => $tourney[3],
+                              
                               'tournament_style' => 'round_robin',
 			      'teams' => $teams,
 			      'games' => $games,
