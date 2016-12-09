@@ -263,13 +263,13 @@ $('.game').on('click', function(e){
 		var variables = id.split(" ");
 		if(variables.length==3 && variables[2] !="" && variables[1] !="" && variables[0] !=""){
 			game=variables[0];
-			hname="Home";
-			aname="Away";
+			hname="Team 1 Score";
+			aname="Team 2 Score";
 			document.getElementById("hometeamname").innerHTML=hname;
 			document.getElementById("awayteamname").innerHTML=aname;
-			alert("hname");
-			var mod = document.getElementById('id01');
-			alert(mod);
+			$('#submitbutton').on('click', fuction(e){
+				alert("submit");
+			});
 		}
 	}else{
 		alert("undefinde");
