@@ -11,7 +11,7 @@ $(document).ready(function(){
 		var numleagues=json.numleagues;
 		var teams = json.teams;
 		var games = json.games;
-		var bracket = json.bracket;
+		var bracket = json.games.bracket;
 		alert(bracket);
 		var id2name = {}
 		for(var idx = 0; idx < teams.length; idx++){
