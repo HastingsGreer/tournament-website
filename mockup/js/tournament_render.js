@@ -79,7 +79,7 @@ $(document).ready(function(){
 				var brk = document.createElement("br");
 				tr.appendChild(brk);
 				tr.className +=" game ";
-				tr.id += " "+" "+ t1 + " "+ t2; 
+				tr.id = gameid+" "+ t1 + " "+ t2; 
 
 				$("#pool_container").append(tr);
 				
