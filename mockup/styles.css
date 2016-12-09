@@ -45,23 +45,23 @@ body{
     vertical-align: middle;
 }
 
-#tournament_list_button, #manage_button, #create_button, #rules_button, #create_account{
+#tournament_list_button, #manage_button, #create_button, #rules_button, #create_account, #addTournamentButton, #seeAllTourneysButton{
     padding:10px 10px 10px 10px;
     margin: 10px;
 }
 
-#tournament_list_button, #manage_button, #rules_button {
+#tournament_list_button, #manage_button, #rules_button, #addTournamentButton, #seeAllTourneysButton {
     background-color:#0b3c5d;
     text-decoration:none;
     color:white;
 }
 
-#create_button, #create_account{
+#create_button, #create_account, #addTournamentButton, #seeAllTourneysButton{
     background-color: #d9b310;
     color:white;
 }
 
-#tournament_list_button:hover, #manage_button:hover, #rules_button:hover, #create_account:hover{
+#tournament_list_button:hover, #manage_button:hover, #rules_button:hover, #create_account:hover, #addTournamentButton:hover, #seeAllTourneysButton:hover{
     transform:scale(1.1);
     background-color: #d9b310;
 }
