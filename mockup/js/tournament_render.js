@@ -7,7 +7,6 @@ $(document).ready(function(){
 	var link = 'getTournament.php?'+id_string;
 	var result = $.getJSON(link, function(json){
 		var name=json.name;
-		alert(name);
 		var numteams=json.numteams;
 		var numleagues=json.numleagues;
 		var teams = json.teams;
