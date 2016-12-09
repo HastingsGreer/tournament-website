@@ -133,3 +133,23 @@ var service = 'wwp.cs.unc.edu/Courses/426-f16/users/tgreer/getTournament.php?id=
 })
 </script>
  -->
+
+ <!-- Button to open the modal login form -->
+<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="action_page.php">
+    <div id="hometeam">
+    <span id="hometeamname"></span><span id="hometeamscore">Score: <input type="number" id="h1s" required></span> 
+    </div>
+    <div id="awayteam">
+    <span id="awayteamname"></span><span id="awayteamscore">Score: <input type="number" id="a1s" required></span> 
+    </div>
+    <input type="submit" id="submitbutton" value="Submit"> 
+  </form>
+</div>
