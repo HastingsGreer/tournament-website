@@ -37,13 +37,16 @@ $(document).ready(function(){
 				h.appendChild(h1n);
 				h.appendChild(h1s);
 				//h1s.appendTo(h1n);
+				var a = document.createElement("tr");
 				var a1n =document.createElement("th");
 				a1n.innerHTML=t2name;
 				var a1s = document.createElement("th");
 				a1s.innerHTML=t2score;
+				a.appendChild(a1n);
+				a.appendChild(a1s);
 				tr.appendChild(th);
 
-				$("#pool_container").appendChild(tr.innerHTML);
+				$("#pool_container").append(tr.innerHTML);
 				
 			}
 		}
