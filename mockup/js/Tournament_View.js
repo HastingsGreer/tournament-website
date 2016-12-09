@@ -17,7 +17,7 @@ var Tournament_View = function(){
 }
 	var userid = getCookie("userid");
 	alert(window.location);
-	if(userid != null  && window.location=="your_tournaments.html"){
+	if(userid != null  && window.location=="http://wwwp.cs.unc.edu/Courses/comp426-f16/users/tgreer/final_project_milestones/mockup/your_tournaments.html"){
 	var url = 'php/listTournament.php?userid=' + userid;
 	}else{
 	var url = 'php/listTournament.php/';	
