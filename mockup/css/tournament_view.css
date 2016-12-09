@@ -32,9 +32,9 @@
 	width: 200px;
 	height: 200px;
 	border: solid #1d2731;
-	text-align: center;
 	display: inline-block;
 	color:white;
-	vertical-align:middle;
-
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
 }
