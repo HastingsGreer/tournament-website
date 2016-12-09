@@ -18,7 +18,7 @@
 	height: 1000px;
 	overflow-y: scroll;
 	width: 100%;
-	display: inline-block;
+	display: table-cell;
 }
 .tournament_card{
 	margin: 1em;
