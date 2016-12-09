@@ -316,7 +316,7 @@ $('.game').on('click', function(e){
 $('.game').on('click', function(e){
 	var object = this;
 	
-	var id = this.id
+	var id = this.id;
 	if(id != undefined){
 		var variables = id.split(" ");
 		if(variables.length==3 && variables[2] !="" && variables[1] !="" && variables[0] !=""){
