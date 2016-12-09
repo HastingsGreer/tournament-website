@@ -47,6 +47,8 @@ $(document).ready(function(){
 				a.appendChild(a1s);
 				th.append(a);
 				tr.appendChild(th);
+				var brk = document.createElement("br");
+				tr.appendChild(brk);
 
 				$("#pool_container").append(tr.innerHTML);
 				
