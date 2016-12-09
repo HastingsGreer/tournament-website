@@ -37,11 +37,11 @@
     
     <script>
     $(document).ready(function (){
-    $(document).on('click', 'a', function(event){
+    $(document).on('click', '#rules', function(event){
         event.preventDefault();
 
         $('html, body').animate({
-            scrollTop: $( $.attr(this, '#rules') ).offset().top
+            scrollTop: $( $.attr(this, 'href') ).offset().top
         }, 800);
     });
 })
