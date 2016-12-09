@@ -15,6 +15,7 @@
 	overflow-y: scroll;
 	display: table-cell;
 	margin:0 auto;
+	float: left;
 }
 .tournament_card{
 	margin: 1em;
