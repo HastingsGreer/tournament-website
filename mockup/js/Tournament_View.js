@@ -29,10 +29,16 @@ var Tournament_View = function(){
 		}else{
 			for(var i = 0; i < json.tournament.length; i++){
 				//console.log(json.tournament[i].name);
+				var id =String(json.tournament[i].id);
+				var link = document.createElement('a');
+				var link_address = "tourneyView.html?id=" + id; 
+				link.setAttribute("href", link_address);
 				var tournament = document.createElement('div');
 				tournament.className = "tournament_card";
 				tournament.innerHTML=String(json.tournament[i].name);
-				tournament_section.appendChild(tournament);
+				link.appendChild(tournament);
+				tournament_section.appendChild(link);
+
 			}
 		}
 		//return names;
