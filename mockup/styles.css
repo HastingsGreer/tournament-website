@@ -70,6 +70,7 @@ body{
 {
     width: 40%;
     display: inline-block;
+    text-align: center;
 }
 
 #create_button:hover, #create_account:hover{
