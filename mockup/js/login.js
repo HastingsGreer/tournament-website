@@ -17,7 +17,7 @@ $(document).ready(function(){
 				success: function (user_json, status, jqXHR) {
 					var u = new User(user_json);
 					var id = u.id;
-					alert("id");
+					alert(id);
                 },
                 error: function () {
                 	document.getElementById('username_availabilty').innerHTML = "Username or Password Invalid";               
