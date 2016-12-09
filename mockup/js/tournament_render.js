@@ -12,11 +12,11 @@ $(document).ready(function(){
 		var teams = json.teams;
 		var games = json.games;
 		alert(games.length);
-		for(var leagues=0; leagues< games.length; leagues++){
-			alert(leagues);
-			for(var g=0; g<games['leagues'].length; g++){
+		for(var leagueidx=0; leagueidx< games.leagues.length; leagueidx++){
+			alert(leagueidx);
+			for(var g=0; g<games.leagues[leagueidx].games.length; g++){
 				alert(g);
-				alert(games[leagues][g].league_id);
+				alert(games.leagues[leagueidx].games[g].id);
 			}
 		}
 		
