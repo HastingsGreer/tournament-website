@@ -261,11 +261,10 @@ $('.game').on('click', function(e){
 	var id = this.id
 	if(id != undefined){
 		var variables = id.split(" ");
-		alert(variables.length);
 		if(variables.length==3 && variables[2] !="" && variables[1] !="" && variables[0] !=""){
 			game=variables[0];
-			hname=id2name[variables[2]].team_name;
-			aname=id2name[variables[2]].team_name;
+			hname="Home";
+			aname="Away";
 			document.getElementById("hometeamname").innerHTML=hname;
 			document.getElementById("awayteamname").innerHTML=aname;
 			alert("hname");
