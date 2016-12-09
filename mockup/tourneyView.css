@@ -25,8 +25,8 @@ main{
 */
 body{
   font-family: 'Maiden Orange', cursive;
-  padding:10px;
-  line-height:1.4em;
+  padding:5px;
+  line-height:.4em;
     color: #328cc1;
 background-color: #1d2731;
 }
