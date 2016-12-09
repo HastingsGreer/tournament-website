@@ -37,7 +37,7 @@
   	align-items: center;
 }
 
-.tournament_card{
+.tournament_card:hover{
 	transform:scale(1.1);
 
 }
