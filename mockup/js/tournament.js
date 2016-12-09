@@ -46,7 +46,7 @@ var Tournament = function() {
 		obj.tournament_style="round_robin";
 		obj.min_rest_time="1:00:00";
 		obj.teams=teams;
-		obj.userid=getcookie("userid");
+		obj.userid=getCookie("userid");
 
 		var json = JSON.stringify(obj);
 		alert(json);
