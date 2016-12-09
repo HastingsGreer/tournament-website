@@ -62,7 +62,7 @@ while($pool = $leaguetable->fetch_row()) {
 
 $lgames = array();
 
-$gametable = mysqli_query($mysqli, "SELECT game.id, game.home_team, game.home_score, game.away_team, game.away_score, game.date, game.time, game.location FROM game, team WHERE game.is_bracket_game=true AND game.home_team = team.id and team.tournamentID = '". $id . "'" );
+$gametable = mysqli_query($mysqli, "SELECT game.id, game.home_team, game.home_score, game.away_team, game.away_score, game.date, game.time, game.location , game.bracket_position FROM game, team WHERE game.is_bracket_game=true AND game.home_team = team.id and team.tournamentID = '". $id . "'" );
        
 while($game = $gametable->fetch_row()) { 
          $lgames[] = (object) array(
@@ -72,7 +72,8 @@ while($game = $gametable->fetch_row()) {
                      "team2" => $game[3],
 		     "team2Score" => $game[4],
 		     "time" => $game[5] . $game[6],
-		     "location" => $game[7]);
+		     "location" => $game[7],
+                     "bracket_position" => $game[8]);
                      
     }  
     
