@@ -25,7 +25,7 @@ main{
 */
 body{
   font-family: 'Maiden Orange', cursive;
-  font-size:16px;
+  font-size:small;
   padding:5px;
   line-height:1.4em;
   color: #328cc1;
@@ -51,14 +51,6 @@ li.game{
     border-top:1px solid #aaa;
   }
 
-#tourney_table_view{
-    background-color:#d9b310;
-    width:400;
-    height:auto;
-    padding:10px 10px 10px 10px;
-    text-align:left;
-    font-size: 20px
-}
 #list_header{
     font-size:25px;
     width:100%;
