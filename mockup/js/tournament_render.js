@@ -257,21 +257,22 @@ $(document).ready(function(){
 
 $('.game').on('click', function(e){
 	var object = this;
+	if(this.id){
 	var id = this.id
 
 	var variables = id.split(" ");
-	if((variables.length < 3 ) || variables[2]==""){
-			//
-		}else{
+	if(variables.lengh==3 && variables[2] !="" && variables[1] !="" && variable[0] !=""){
 			game=variables[0];
 			hname=id2name[variables[2]].team_name;
 			aname=id2name[variables[2]].team_name;
 			document.getElementById("hometeamname").innerHTML=hname;
 			document.getElementById("awayteamname").innerHTML=aname;
-			var modal = document.getElementById('id01');
+			alert("check");
+			//var modal = document.getElementById('id01');
 
 		}
 	}
+}
 	);
 
 });
