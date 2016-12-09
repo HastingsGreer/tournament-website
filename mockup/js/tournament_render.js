@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	var id2name;
 	var url=String(window.location).split('?');
 	var id_string=url[1];
 	if(id_string==""){
@@ -77,21 +78,25 @@ $(document).ready(function(){
 			var game=bracket[i];
 			if(game.team1!=0){
 				var t1=id2name[game.team1].team_name;
+				var t1id=id2name[game.team1].team_id;
 				var t1seed=id2name[game.team1].seed;
 				var t1s=bracket[i].team1Score;
 			}else{
 				var t1=" ";
 				var t1seed=" ";
 				var t1s=" ";
+				var t1id=" ";
 			}
 			if(game.team2 !=0){
 				var t2=id2name[game.team2].team_name;
 				var t2s=bracket[i].team2Score;
 				var t2seed=id2name[game.team2].seed;
+				var t2id=id2name[game.team2].team_id;
 			}else{
 				var t2=" ";
 				var t2s=" ";
 				var t2seed=" ";
+				var t2id=" "
 			}
 
 			var bracketpos = game.bracket_position;
@@ -102,8 +107,8 @@ $(document).ready(function(){
 				document.getElementById("0away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("0hscore").innerHTML=t1s;
 				document.getElementById("0ascore").innerHTML=t2s;
-				document.getElementById("0home").parentNode.id=gameid;
-				document.getElementById("0away").parentNode.id=gameid;
+				document.getElementById("0home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("0away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 
 			}else if(bracketpos==1){
 				var gameid=game.gameID;
@@ -111,115 +116,115 @@ $(document).ready(function(){
 				document.getElementById("1away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("1hscore").innerHTML=t1s;
 				document.getElementById("1ascore").innerHTML=t2s;
-				document.getElementById("1home").parentNode.id=gameid;
-				document.getElementById("1away").parentNode.id=gameid;
+				document.getElementById("1home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("1away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}else if(bracketpos==2){
 				var gameid=game.gameID;
 				document.getElementById("2home").innerHTML=t1seed + " " + t1;
 				document.getElementById("2away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("2hscore").innerHTML=t1s;
 				document.getElementById("2ascore").innerHTML=t2s;
-				document.getElementById("2home").parentNode.id=gameid;
-				document.getElementById("2away").parentNode.id=gameid;
+				document.getElementById("2home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("2away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}else if(bracketpos==3){
 				var gameid=game.gameID;
 				document.getElementById("3home").innerHTML=t1seed + " " + t1;
 				document.getElementById("3away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("3hscore").innerHTML=t1s;
 				document.getElementById("3ascore").innerHTML=t2s;
-				document.getElementById("3home").parentNode.id=gameid;
-				document.getElementById("3away").parentNode.id=gameid;
+				document.getElementById("3home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("3away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}else if(bracketpos==4){
 				var gameid=game.gameID;
 				document.getElementById("4home").innerHTML=t1seed + " " + t1;
 				document.getElementById("4away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("4hscore").innerHTML=t1s;
 				document.getElementById("4ascore").innerHTML=t2s;
-				document.getElementById("4home").parentNode.id=gameid;
-				document.getElementById("4away").parentNode.id=gameid;
+				document.getElementById("4home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("4away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}else if(bracketpos==5){
 				var gameid=game.gameID;
 				document.getElementById("5home").innerHTML=t1seed + " " + t1;
 				document.getElementById("5away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("5hscore").innerHTML=t1s;
 				document.getElementById("5ascore").innerHTML=t2s;
-				document.getElementById("5home").parentNode.id=gameid;
-				document.getElementById("5away").parentNode.id=gameid;
+				document.getElementById("5home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("5away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}else if(bracketpos==6){
 				var gameid=game.gameID;
 				document.getElementById("6home").innerHTML=t1seed + " " + t1;
 				document.getElementById("6away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("6hscore").innerHTML=t1s;
 				document.getElementById("6ascore").innerHTML=t2s;
-				document.getElementById("6home").parentNode.id=gameid;
-				document.getElementById("6away").parentNode.id=gameid;
+				document.getElementById("6home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("6away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}else if(bracketpos==7){
 				var gameid=game.gameID;
 				document.getElementById("7home").innerHTML=t1seed + " " + t1;
 				document.getElementById("7away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("7hscore").innerHTML=t1s;
 				document.getElementById("7ascore").innerHTML=t2s;
-				document.getElementById("7home").parentNode.id=gameid;
-				document.getElementById("7away").parentNode.id=gameid;
+				document.getElementById("7home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("7away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}else if(bracketpos==8){
 				var gameid=game.gameID;
 				document.getElementById("8home").innerHTML=t1seed + " " + t1;
 				document.getElementById("8away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("8hscore").innerHTML=t1s;
 				document.getElementById("8ascore").innerHTML=t2s;
-				document.getElementById("8home").parentNode.id=gameid;
-				document.getElementById("8away").parentNode.id=gameid;
+				document.getElementById("8home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("8away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}else if(bracketpos==9){
 				var gameid=game.gameID;
 				document.getElementById("9home").innerHTML=t1seed + " " + t1;
 				document.getElementById("9away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("9hscore").innerHTML=t1s;
 				document.getElementById("9ascore").innerHTML=t2s;
-				document.getElementById("9home").parentNode.id=gameid;
-				document.getElementById("9away").parentNode.id=gameid;
+				document.getElementById("9home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("9away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}else if(bracketpos==10){
 				document.getElementById("10home").innerHTML=t1seed + " " + t1;
 				document.getElementById("10away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("10hscore").innerHTML=t1s;
 				document.getElementById("10ascore").innerHTML=t2s;
-				document.getElementById("10home").parentNode.id=gameid;
-				document.getElementById("10away").parentNode.id=gameid;
+				document.getElementById("10home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("10away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}else if(bracketpos==11){
 				var gameid=game.gameID;
 				document.getElementById("11home").innerHTML=t1seed + " " + t1;
 				document.getElementById("11away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("11hscore").innerHTML=t1s;
 				document.getElementById("11ascore").innerHTML=t2s;
-				document.getElementById("11home").parentNode.id=gameid;
-				document.getElementById("11away").parentNode.id=gameid;
+				document.getElementById("11home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("11away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}else if(bracketpos==12){
 				var gameid=game.gameID;
 				document.getElementById("12home").innerHTML=t1seed + " " + t1;
 				document.getElementById("12away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("12hscore").innerHTML=t1s;
 				document.getElementById("12ascore").innerHTML=t2s;
-				document.getElementById("12home").parentNode.id=gameid;
-				document.getElementById("12away").parentNode.id=gameid;
+				document.getElementById("12home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("12away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}else if(bracketpos==13){
 				var gameid=game.gameID;
 				document.getElementById("13home").innerHTML=t1seed + " " + t1;
 				document.getElementById("13away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("13hscore").innerHTML=t1s;
 				document.getElementById("13ascore").innerHTML=t2s;
-				document.getElementById("13home").parentNode.id=gameid;
-				document.getElementById("13away").parentNode.id=gameid;
+				document.getElementById("13home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("13away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}else if(bracketpos==14){
 				var gameid=game.gameID;
 				document.getElementById("14home").innerHTML=t1seed + " " + t1;
 				document.getElementById("14away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("14hscore").innerHTML=t1s;
 				document.getElementById("14ascore").innerHTML=t2s;
-				document.getElementById("14home").parentNode.id=gameid;
-				document.getElementById("14away").parentNode.id=gameid;
+				document.getElementById("14home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				document.getElementById("14away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 			}
 		}
 		
 
 	});
-
+	var
 });
