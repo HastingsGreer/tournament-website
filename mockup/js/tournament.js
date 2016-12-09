@@ -39,7 +39,7 @@ var Tournament = function() {
 		{
 			type:"POST",
 			dataType: "json",
-			data: jQuery.param(obj),
+			data: json,
 			success: function(json, status, jqXHR) {
 				var id = json.id;
 				var redirect = "tourneyView.html?id=" + id;
