@@ -8,6 +8,9 @@
   <meta name="description" content="BracketBuster Account Page">
   <meta name="author" content="Destiny, Hastings, Katherine, Pamela">
 <link rel="stylesheet" type="text/css" href="styles.css">
+<link href="https://fonts.googleapis.com/css?family=Maiden+Orange" rel="stylesheet">
+<link type="text/css" href="create_tournament.css" rel="stylesheet">
+
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -17,20 +20,24 @@
 	<script src="js/registration.js"></script>
 </head>
 <body>
+    <div id="back_photo">
+    
 <div id="registerphp">
-	<h2 class="title">Create an account</h2>
+	<div id="create_title">Create Account</div>
 	<form>
 		<div id="register_form">
 			<label for="username">Email:</label>
 			<input type="text" name="username" id="username" required><span id="username_availabilty"><!-Leave this here. JS gives info about whether account exists. BUT style the text. --></span><br>
 			<label for="password">Password:</label>
-			<input type="password" name="password" id="password" required><span id="password_availabilty"></span>Password should be at least 8 characters. NO SPACES!<br>
+			<input type="password" name="password" id="password" required><span id="password_availabilty"></span><br>
 			<label for="password">Verify Password:</label>
 			<input type="password" name="verify" id="verify" required><br><span id="verify_match"></span>
 			<input type="submit" name="register" id="register" value="Sign up"><br>
+            Password should be at least 8 characters. NO SPACES!
 		</div>
 		</form>
 	</div>
 
+        </div>
 </body>
 </html>
