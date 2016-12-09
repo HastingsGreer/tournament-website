@@ -49,7 +49,6 @@ var Tournament = function() {
 		obj.userid=getCookie("userid");
 
 		var json = JSON.stringify(obj);
-		alert(json);
 		$.ajax('makeTournament.php',
 		{
 			type:"POST",
