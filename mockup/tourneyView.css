@@ -15,7 +15,7 @@ main{
 }
   .round .spacer{ flex-grow:6; }
   .round .spacer:first-child,
-  .round .spacer:last-child{ flex-grow:.5; }
+  .round .spacer:last-child{ flex-grow:1.5; }
   .round .game-spacer{
     flex-grow:2;
   }
