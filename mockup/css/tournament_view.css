@@ -24,7 +24,7 @@
 	height: 800px;
 	overflow-y: scroll;
 	margin:0 auto;
-
+	padding: 20px 20px 20px 20px;
 }
 .tournament_card{
 	margin: 1em;
