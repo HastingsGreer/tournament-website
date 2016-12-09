@@ -72,6 +72,7 @@ $(document).ready(function(){
 		}
 
 		for(var i=0; i< bracket.length; i++){
+			alert(bracket.length);
 			var game=bracket[i];
 			if(game.team1!=0){
 				var t1=id2name[game.team1].team_name;
