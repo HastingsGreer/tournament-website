@@ -13,9 +13,10 @@ main{
   list-style:none;
   padding:0;
 }
-  .round .spacer{ flex-grow:.3; }
+  .round .spacer{ flex-grow:1; }
   .round .spacer:first-child,
   .round .spacer:last-child{ flex-grow:.5; }
+
   .round .game-spacer{
     flex-grow:1;
   }
@@ -24,9 +25,10 @@ main{
 */
 body{
   font-family: 'Maiden Orange', cursive;
+  font-size:small;
   padding:10px;
   line-height:1.4em;
-    color: #328cc1;
+  color: #328cc1;
 background-color: #1d2731;
 }
 li.game{
