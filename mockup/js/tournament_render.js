@@ -212,7 +212,7 @@ $(document).ready(function(){
 				document.getElementById("13ascore").innerHTML=t2s;
 				document.getElementById("13home").parentNode.id=gameid+ " " + t1id + " " + t2id;
 				document.getElementById("13away").parentNode.id=gameid+ " " + t1id + " " + t2id;
-			}else if(bracketpos==14){
+			}else{
 				var gameid=game.gameID;
 				document.getElementById("14home").innerHTML=t1seed + " " + t1;
 				document.getElementById("14away").innerHTML=t2seed+ " " + t2;
@@ -226,11 +226,11 @@ $(document).ready(function(){
 
 	});
 
-	
-	$(".game").on('click', function(e){
-		var object = this;
-		alert(this.id);
-	}
 
-	}
+$(".game").on('click', function(e){
+	var object = this;
+	alert(this.id);
+});
+
+
 });
