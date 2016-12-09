@@ -10,6 +10,8 @@
 	text-align: right;
 }
 #team_container{
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: baseline;
 	align-content: center;
