@@ -62,3 +62,19 @@ li.game{
     width:100%;
     text-align:left;
 }
+
+th{
+    background-color:#d9b310;
+    margin: 15px;
+    width: 300px;
+}
+
+.homename, .awayname{
+  color:white;
+  font-size:20px;
+  border: thick white;
+}
+#pool_view tr{
+  border: thick white;
+  padding: 15px 15px 15px 15px;
+}
