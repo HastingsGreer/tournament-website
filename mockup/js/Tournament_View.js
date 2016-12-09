@@ -1,8 +1,28 @@
 var Tournament_View = function(){
 
 	var tournament_section = document.getElementById("team_container");
-
-	var getTournamentNames = $.getJSON('php/get_tournaments.php', function(json) {
+	function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+}
+	var user_id = getCookie("userid");
+	alert(user_id);
+	if(user_id != null){
+	var url = 'php/listTournament.php/' + userid;
+	}else{
+	var url = 'php/listTournament.php/'	
+	}
+	var getTournamentNames = $.getJSON(url, function(json) {
 		tournament_section.innerHTML="";
 		var names = [];
 		if(json.tournament.length==0){

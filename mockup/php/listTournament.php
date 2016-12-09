@@ -21,7 +21,6 @@ if (isset($_REQUEST['userid'])) {
 	}
 
 }else{
-	echo "Made it into listtournament";
 	$sql = "SELECT * FROM tournament";
 	$result = $conn->query($sql);
 	if ($result->num_rows > 0) {
