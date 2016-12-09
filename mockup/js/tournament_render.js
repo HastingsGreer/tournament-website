@@ -267,7 +267,7 @@ $('.game').on('click', function(e){
 			aname="Team 2 Score";
 			document.getElementById("hometeamname").innerHTML=hname;
 			document.getElementById("awayteamname").innerHTML=aname;
-			$('#submitbutton').on('click', fuction(e){
+			$('#submitbutton').on('click', function(e){
 				alert("submit");
 			});
 		}
