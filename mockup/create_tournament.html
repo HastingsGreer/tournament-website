@@ -19,10 +19,12 @@
     
   <form id="new-tournament">
 
-    Tournament Name: <input type=text name=tournament_name required><br>
-    Start Date: <input type=date name=start_date required><br>
-    End Date: <input type=date name=end_date required><br>
-      
+    Tournament Name: <input type=text name=tournament_name id="name" required><br>
+    Start Date: <input type=date name=start_date id="start_date" required><br>
+    End Date: <input type=date name=end_date id="end_date" required><br>
+    Number of Pools: <input type="number" name="numleagues" id="numleagues" required><br>
+
+    
     Number of Teams:
     <select id="numTeams">
       <option value=4>4</option>
@@ -32,14 +34,14 @@
     </select><br>
 
     <div id="team_name_area">
-    Team Name: <input type=text name=team1 value="Enter a team name" required> <br>
-    Team Name: <input type=text name=team1 value="Enter a team name" required> <br>
-    Team Name: <input type=text name=team1 value="Enter a team name" required> <br>
-    Team Name: <input type=text name=team1 value="Enter a team name" required> <br>
+    Team Name: <input type=text name=team1 class="team_name" required> <br>
+    Team Name: <input type=text name=team1 class="team_name" required> <br>
+    Team Name: <input type=text name=team1 class="team_name" required> <br>
+    Team Name: <input type=text name=team1 class="team_name" required> <br>
     </div>
 
 
-    <input type="submit" value="Submit"> 
+    <input type="submit" id="submitbutton" value="Submit"> 
     <!-- Add an on submit feature for validation -->
     
   </form>
