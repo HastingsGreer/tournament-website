@@ -33,7 +33,7 @@
 	height: 200px;
 	border: solid #d9b310;
 	text-align: center;
-	display: table-cell;
+	display: inline-block;
 	color:white;
 
 }
