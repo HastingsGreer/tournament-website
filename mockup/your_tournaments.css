@@ -1,0 +1,8 @@
+#backgroundPhoto {
+    background-image:url("CarolinaSoccer.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width:100%;
+    height:900px;
+    background-size:cover;    
+}
