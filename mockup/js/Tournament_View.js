@@ -16,7 +16,6 @@ var Tournament_View = function(){
     return "";
 }
 	var userid = getCookie("userid");
-	alert(window.location);
 	if(userid != null  && window.location=="http://wwwp.cs.unc.edu/Courses/comp426-f16/users/tgreer/final_project_milestones/mockup/your_tournaments.html"){
 	var url = 'php/listTournament.php?userid=' + userid;
 	}else{
@@ -26,7 +25,7 @@ var Tournament_View = function(){
 		tournament_section.innerHTML="";
 		var names = [];
 		if(json.tournament.length==0){
-			tournament_section.innerHTML="NO ONGOING TOURNAMENTS";
+			tournament_section.innerHTML="NO TOURNAMENTS :'(";
 		}else{
 			for(var i = 0; i < json.tournament.length; i++){
 				//console.log(json.tournament[i].name);
