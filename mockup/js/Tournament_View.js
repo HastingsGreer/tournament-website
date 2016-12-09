@@ -18,7 +18,7 @@ var Tournament_View = function(){
 	var userid = getCookie("userid");
 	alert(userid);
 	if(userid != null){
-	var url = 'php/listTournament.php/' + userid;
+	var url = 'php/listTournament.php/userid=' + userid;
 	}else{
 	var url = 'php/listTournament.php/';	
 	}
