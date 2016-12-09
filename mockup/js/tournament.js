@@ -36,8 +36,8 @@ var Tournament = function() {
 		var json = JSON.stringify(obj);
 		$.ajax('makeTournament.php',
 		{
-			type:"POST"
-			dataType: "json"
+			type:"POST",
+			dataType: "json",
 			data: jQuery.param(obj),
 			success: function(json, status, jqXHR) {
 				var id = json.id;
