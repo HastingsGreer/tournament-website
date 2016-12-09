@@ -1,7 +1,10 @@
 <?php
 header('Content-Type: application/json');
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 $id = intval($_GET['id']);
-echo $id;
+#echo $id;
 $mysqli = mysqli_connect("classroom.cs.unc.edu", "tgreer", "horsejump5678", "tgreerdb");
 $teamtable = mysqli_query($mysqli, "SELECT id, name, poolID, seed FROM team WHERE tournamentID = " . $id );
 
@@ -17,26 +20,67 @@ while($team = $teamtable->fetch_row()) {
 #var_dump($teams);
 
 
-$leaguetable = mysqli_query($mysqli, "SELECT ID, name, FROM pool WHERE tournamentID = " . $id );
+$leaguetable = mysqli_query($mysqli, "SELECT ID, name FROM pool WHERE tournamentID = " . $id );
 
+#echo "SELECT ID, name FROM pool WHERE tournamentID = " . $id;
+#echo mysqli_error($mysqli);
+#var_dump($leaguetable);
 $leagues = array();
-while($pool = $leaguetable->fetch_row() {   
-    $league = array("league_id" => $pool[0],
+#echo "hi2";
+while($pool = $leaguetable->fetch_row()) {   
+    
+    
+    $league = (object) array("league_id" => $pool[0],
                     "league_name" => $pool[1]);
     $lteams = array();
     foreach($teams as $t){
-        if($t->team_league == $leagueid){
+        if($t->team_league == $pool[0]){
 	    $lteams[] = $t->team_id;
 	}
     }
-    $league["teams_in_league"] = $lteams;
+    $league->teams_in_league = $lteams;
+    $lgames = array();
 
+    $gametable = mysqli_query($mysqli, "SELECT game.id, game.home_team, game.home_score, game.away_team, game.away_score, game.date, game.time, game.location FROM game, team WHERE game.is_bracket_game=false AND game.home_team = team.id and team.poolID = '". $pool[0] . "'" );
+       
+    while($game = $gametable->fetch_row()) { 
+         $lgames[] = (object) array(
+	             "gameID" => $game[0],
+		     "team1" => $game[1],
+		     "team1Score" => $game[2],
+                     "team2" => $game[3],
+		     "team2Score" => $game[4],
+		     "time" => $game[5] . $game[6],
+		     "location" => $game[7]);
+                     
+    }  
+    $league->games = $lgames;
     $leagues[] = $league;
 
 }
+#var_dump($leagues);
+
+$lgames = array();
+
+$gametable = mysqli_query($mysqli, "SELECT game.id, game.home_team, game.home_score, game.away_team, game.away_score, game.date, game.time, game.location FROM game, team WHERE game.is_bracket_game=true AND game.home_team = team.id and team.tournamentID = '". $id . "'" );
+       
+while($game = $gametable->fetch_row()) { 
+         $lgames[] = (object) array(
+	             "gameID" => $game[0],
+		     "team1" => $game[1],
+		     "team1Score" => $game[2],
+                     "team2" => $game[3],
+		     "team2Score" => $game[4],
+		     "time" => $game[5] . $game[6],
+		     "location" => $game[7]);
+                     
+    }  
+    
+    
+
 
 $games = (object) array("leagues" => $leagues,
-                        "bracket" => array());
+                        "bracket" => $lgames);
 
 $tournament1 = (object) array(
                               'numteams'=> 16,
@@ -50,19 +94,7 @@ $tournament1 = (object) array(
 
 
 
-$tournament2 = (object) array('tournament' => 'UNC basketball Intramurals 2016',
-                              'tournament_id' => '1235',
-                              'tournament_day' => '12-23-16');
-echo id;
-if($id == 1234){
-    echo json_encode($tournament1);
-} else {
-    if($id == 1235){
-        echo json_encode($tournament2);
-    } else {
-        echo json_encode(null);
-    }
-}
+#echo $id;
+echo json_encode($tournament1);
 ?>
-
 
