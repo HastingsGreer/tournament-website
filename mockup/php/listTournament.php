@@ -1,5 +1,10 @@
 <?php
 
+$servername = "classroom.cs.unc.edu";
+$username = "tgreer";
+$password = "horsejump5678";
+$dbname = "tgreerdb";
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 if (isset($_REQUEST['userid'])) {
 	$uid = $_REQUEST['userid'];
