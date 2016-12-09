@@ -26,7 +26,7 @@ $(document).ready(function(){
 				var t1score=game.team1Score;
 				var t2score=game.team2Score;
 
-				document.getElementById("pool_container").appendChild(game);
+				document.getElementById("pool_container").innerHTML=t2name;
 				
 			}
 		}
