@@ -17,6 +17,7 @@
 	align-items: baseline;
 	align-content: center;
 	height: 80%;
+	overflow-x: auto;
 }
 .tournament_card{
 	margin: 1em;
