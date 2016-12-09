@@ -29,10 +29,16 @@
 	margin: 1.5em;
 	padding: 1em;
     	background-color: rgba(50, 140, 193, .50);
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 	border: solid #1d2731;
 	display: inline-block;
 	color:white;
   	align-items: center;
 }
+
+.tournament_card:hover{
+	transform:scale(1.1);
+
+}
+
