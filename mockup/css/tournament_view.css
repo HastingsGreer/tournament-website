@@ -10,7 +10,7 @@
 	text-align: right;
 }
 #team_container{
-	width: 100%;
+	width: 2000px;
 	height: 800px;
 	overflow-y: scroll;
 	display: table-cell;
