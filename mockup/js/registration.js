@@ -57,7 +57,6 @@ $(document).ready(function() {
             obj.password=password;
             var json = JSON.stringify(obj);
 
-
             $.ajax(url_base + "/user.php/",
                 {
                     type: "POST",

@@ -3,6 +3,9 @@
     <title>Bracket Buster!</title>
     <link type="text/css" href="styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Maiden+Orange" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+    <script src="js/User.js"></script>
+    <script src="js/login.js"></script>
   </head>
   
   <body>
@@ -10,12 +13,11 @@
         <div id="login-section">
             <div id="title">BRACKET BUSTER</div> <br>
             <form id="login">
-
                 Organizer Login:<br>
                 Username: <input type=text name=username id="username"> <span id="username_availabilty"> </span><br> <br> 
                 <!-- //Going to do some ongoing username and password check -->
                 Password: <input type=password name=password id="password"><span id="password_check"> </span><br> <br> 
-              <button type="submit">LOGIN</button>
+              <button type="submit" id="loginbutton">LOGIN</button>
             </form>
             
             <a href="register.html" style="text-decoration:none"><div id="create_account"> CREATE ACCOUNT </div></a>
