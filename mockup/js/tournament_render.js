@@ -23,6 +23,7 @@ $(document).ready(function(){
 			
 			for(var g=0; g<games.leagues[leagueidx].games.length; g++){
 				var game = games.leagues[leagueidx].games[g];
+				var gameid = game.gameID
 				var t1=game.team1;
 				var t1name = id2name[t1].team_name;
 				var t2=game.team2;
@@ -38,6 +39,8 @@ $(document).ready(function(){
 				var gamebox = document.createElement("table");
 				gamebox.className="gamebox";
 				var tr=document.createElement("tr");
+				tr.className +=" game ";
+				tr.id += " "+" "+ t1 + " "+ t2;
 				var th=document.createElement("th");
 				var stuff = document.createElement('td');
 				stuff.className="gamenum";
@@ -45,19 +48,23 @@ $(document).ready(function(){
 				stuff.innerHTML=gn;
 				th.appendChild(stuff);
 				var h= document.createElement("tr");
+				h.className +=" game ";
+				h.id += " "+" "+ t1 + " "+ t2;
 				var h1n=document.createElement("th");
 				h1n.className="homename";
 				h1n.innerHTML= t1name;
 				var h1s=document.createElement("th");
-				h1s.className="hs";
+				h1s.className+="hs";
 				h1s.innerHTML=t1score;
 				h.appendChild(h1n);
 				h.appendChild(h1s);
 				th.appendChild(h);
 				//h1s.appendTo(h1n);
 				var a = document.createElement("tr");
+				a.className +=" game ";
+				a.id += " "+" "+ t1 + " "+ t2;
 				var a1n =document.createElement("th");
-				a1n.className="awayname";
+				a1n.className+="awayname";
 				a1n.innerHTML=t2name;
 				var a1s = document.createElement("th");
 				a1s.innerHTML=t2score;
@@ -69,7 +76,8 @@ $(document).ready(function(){
 				tr.appendChild(th);
 				var brk = document.createElement("br");
 				tr.appendChild(brk);
-				tr.className +=" game";
+				tr.className +=" game ";
+				tr.id += " "+" "+ t1 + " "+ t2; 
 
 				$("#pool_container").append(tr);
 				
