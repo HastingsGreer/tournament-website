@@ -12,6 +12,7 @@ $(document).ready(function(){
 		var teams = json.teams;
 		var games = json.games;
 		var bracket = json.bracket;
+		alert(bracket.size());
 		var id2name = {}
 		for(var idx = 0; idx < teams.length; idx++){
 			id2name[teams[idx].team_id] = teams[idx];
