@@ -295,7 +295,7 @@ $('.game').on('click', function(e){
 				alert(jqXHR.responseText);
 			}
 		});
-		}
+		});
 	}else{
 		alert("undefinde");
 	}	
