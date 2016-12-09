@@ -95,7 +95,6 @@ $(document).ready(function(){
 			var bracketpos = game.bracket_position;
 			alert(bracketpos);
 			if(bracketpos==0){
-
 				document.getElementById("0home").innerHTML=t1seed + " " + t1;
 				document.getElementById("0away").innerHTML=t2seed+ " " + t2;
 				document.getElementById("0hscore").innerHTML=t1s;
