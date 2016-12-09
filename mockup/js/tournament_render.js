@@ -27,7 +27,7 @@ $(document).ready(function(){
 				var t2score=game.team2Score;
 				var tr=document.createElement("tr");
 				var th=document.createElement("th");
-				th.innerHTML="Game: "+gameID;
+				th.innerHTML="Game: "+game.gameID;
 				tr.appendChild(th);
 				var h= document.createElement("tr");
 				var h1n=document.createElement("th");
