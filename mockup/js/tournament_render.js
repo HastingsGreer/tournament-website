@@ -40,10 +40,10 @@ $(document).ready(function(){
 				gamebox.className="gamebox";
 				var tr=document.createElement("tr");
 				tr.className +=" game ";
-				tr.id += gameid+" "+ t1 + " "+ t2;
+				tr.id = gameid+" "+ t1 + " "+ t2;
 				var th=document.createElement("th");
 				th.className +=" game ";
-				th.id +=  gameid+" "+ t1 + " "+ t2;
+				th.id =  gameid+" "+ t1 + " "+ t2;
 				var stuff = document.createElement('td');
 				stuff.className="gamenum";
 				var gn = "Game: "+game.gameID;
@@ -51,7 +51,7 @@ $(document).ready(function(){
 				th.appendChild(stuff);
 				var h= document.createElement("tr");
 				h.className +=" game ";
-				h.id += " "+" "+ t1 + " "+ t2;
+				h.id = gameid+" "+ t1 + " "+ t2;
 				var h1n=document.createElement("th");
 				h1n.className="homename";
 				h1n.innerHTML= t1name;
@@ -64,7 +64,7 @@ $(document).ready(function(){
 				//h1s.appendTo(h1n);
 				var a = document.createElement("tr");
 				a.className +=" game ";
-				a.id +=  gameid+" "+ t1 + " "+ t2;
+				a.id =  gameid+" "+ t1 + " "+ t2;
 				var a1n =document.createElement("th");
 				a1n.className+="awayname";
 				a1n.innerHTML=t2name;
