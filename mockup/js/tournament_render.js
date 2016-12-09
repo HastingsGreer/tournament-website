@@ -262,7 +262,7 @@ $('.game').on('click', function(e){
 	if(id != undefined){
 		var variables = id.split(" ");
 		alert(variables.length);
-		if(variables.lengh==3 && variables[2] !="" && variables[1] !="" && variable[0] !=""){
+		if(variables.lengh==3){
 			game=variables[0];
 			hname=id2name[variables[2]].team_name;
 			aname=id2name[variables[2]].team_name;
