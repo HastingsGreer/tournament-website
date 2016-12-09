@@ -36,3 +36,9 @@
 	color:white;
   	align-items: center;
 }
+
+.tournament_card{
+	transform:scale(1.1);
+
+}
+
