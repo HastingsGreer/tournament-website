@@ -152,155 +152,155 @@ $(document).ready(function(){
 				if(teams2){
 					document.getElementById("4home").parentNode.id=gameid+ " " + t1id + " " + t2id;
 					document.getElementById("4away").parentNode.id=gameid+ " " + t1id + " " + t2id;
-				}}else if(bracketpos==5){
-					var gameid=game.gameID;
-					document.getElementById("5home").innerHTML=t1seed + " " + t1;
-					document.getElementById("5away").innerHTML=t2seed+ " " + t2;
-					document.getElementById("5hscore").innerHTML=t1s;
-					document.getElementById("5ascore").innerHTML=t2s;
-					if(teams2){
-						document.getElementById("5home").parentNode.id=gameid+ " " + t1id + " " + t2id;
-						document.getElementById("5away").parentNode.id=gameid+ " " + t1id + " " + t2id;
-					}
-				}else if(bracketpos==6){
-					var gameid=game.gameID;
-					document.getElementById("6home").innerHTML=t1seed + " " + t1;
-					document.getElementById("6away").innerHTML=t2seed+ " " + t2;
-					document.getElementById("6hscore").innerHTML=t1s;
-					document.getElementById("6ascore").innerHTML=t2s;
-					if(teams2){
-						document.getElementById("6home").parentNode.id=gameid+ " " + t1id + " " + t2id;
-						document.getElementById("6away").parentNode.id=gameid+ " " + t1id + " " + t2id;
-					}
-				}else if(bracketpos==7){
-					var gameid=game.gameID;
-					document.getElementById("7home").innerHTML=t1seed + " " + t1;
-					document.getElementById("7away").innerHTML=t2seed+ " " + t2;
-					document.getElementById("7hscore").innerHTML=t1s;
-					document.getElementById("7ascore").innerHTML=t2s;
-					if(teams2){
-						document.getElementById("7home").parentNode.id=gameid+ " " + t1id + " " + t2id;
-						document.getElementById("7away").parentNode.id=gameid+ " " + t1id + " " + t2id;
-					}
-				}else if(bracketpos==8){
-					var gameid=game.gameID;
-					document.getElementById("8home").innerHTML=t1seed + " " + t1;
-					document.getElementById("8away").innerHTML=t2seed+ " " + t2;
-					document.getElementById("8hscore").innerHTML=t1s;
-					document.getElementById("8ascore").innerHTML=t2s;
-					if(teams2){
-						document.getElementById("8home").parentNode.id=gameid+ " " + t1id + " " + t2id;
-						document.getElementById("8away").parentNode.id=gameid+ " " + t1id + " " + t2id;
-					}
-				}else if(bracketpos==9){
-					var gameid=game.gameID;
-					document.getElementById("9home").innerHTML=t1seed + " " + t1;
-					document.getElementById("9away").innerHTML=t2seed+ " " + t2;
-					document.getElementById("9hscore").innerHTML=t1s;
-					document.getElementById("9ascore").innerHTML=t2s;
-					if(teams2){
-						document.getElementById("9home").parentNode.id=gameid+ " " + t1id + " " + t2id;
-						document.getElementById("9away").parentNode.id=gameid+ " " + t1id + " " + t2id;
-					}
-				}else if(bracketpos==10){
-					document.getElementById("10home").innerHTML=t1seed + " " + t1;
-					document.getElementById("10away").innerHTML=t2seed+ " " + t2;
-					document.getElementById("10hscore").innerHTML=t1s;
-					document.getElementById("10ascore").innerHTML=t2s;
-					if(teams2){
-						document.getElementById("10home").parentNode.id=gameid+ " " + t1id + " " + t2id;
-						document.getElementById("10away").parentNode.id=gameid+ " " + t1id + " " + t2id;
-					}
-				}else if(bracketpos==11){
-					var gameid=game.gameID;
-					document.getElementById("11home").innerHTML=t1seed + " " + t1;
-					document.getElementById("11away").innerHTML=t2seed+ " " + t2;
-					document.getElementById("11hscore").innerHTML=t1s;
-					document.getElementById("11ascore").innerHTML=t2s;
-					if(teams2){
-						document.getElementById("11home").parentNode.id=gameid+ " " + t1id + " " + t2id;
-						document.getElementById("11away").parentNode.id=gameid+ " " + t1id + " " + t2id;
-					}
-				}else if(bracketpos==12){
-					var gameid=game.gameID;
-					document.getElementById("12home").innerHTML=t1seed + " " + t1;
-					document.getElementById("12away").innerHTML=t2seed+ " " + t2;
-					document.getElementById("12hscore").innerHTML=t1s;
-					document.getElementById("12ascore").innerHTML=t2s;
-					if(teams2){
-						document.getElementById("12home").parentNode.id=gameid+ " " + t1id + " " + t2id;
-						document.getElementById("12away").parentNode.id=gameid+ " " + t1id + " " + t2id;
-					}
-				}else if(bracketpos==13){
-					var gameid=game.gameID;
-					document.getElementById("13home").innerHTML=t1seed + " " + t1;
-					document.getElementById("13away").innerHTML=t2seed+ " " + t2;
-					document.getElementById("13hscore").innerHTML=t1s;
-					document.getElementById("13ascore").innerHTML=t2s;
-					if(teams2){
-						document.getElementById("13home").parentNode.id=gameid+ " " + t1id + " " + t2id;
-						document.getElementById("13away").parentNode.id=gameid+ " " + t1id + " " + t2id;
-					}
-				}else if(bracketpos==14){
-					var gameid=game.gameID;
-					document.getElementById("14home").innerHTML=t1seed + " " + t1;
-					document.getElementById("14away").innerHTML=t2seed+ " " + t2;
-					document.getElementById("14hscore").innerHTML=t1s;
-					document.getElementById("14ascore").innerHTML=t2s;
-					if(teams2){
-						document.getElementById("14home").parentNode.id=gameid+ " " + t1id + " " + t2id;
-						document.getElementById("14away").parentNode.id=gameid+ " " + t1id + " " + t2id;
-					}
+				}
+			}else if(bracketpos==5){
+				var gameid=game.gameID;
+				document.getElementById("5home").innerHTML=t1seed + " " + t1;
+				document.getElementById("5away").innerHTML=t2seed+ " " + t2;
+				document.getElementById("5hscore").innerHTML=t1s;
+				document.getElementById("5ascore").innerHTML=t2s;
+				if(teams2){
+					document.getElementById("5home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+					document.getElementById("5away").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				}
+			}else if(bracketpos==6){
+				var gameid=game.gameID;
+				document.getElementById("6home").innerHTML=t1seed + " " + t1;
+				document.getElementById("6away").innerHTML=t2seed+ " " + t2;
+				document.getElementById("6hscore").innerHTML=t1s;
+				document.getElementById("6ascore").innerHTML=t2s;
+				if(teams2){
+					document.getElementById("6home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+					document.getElementById("6away").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				}
+			}else if(bracketpos==7){
+				var gameid=game.gameID;
+				document.getElementById("7home").innerHTML=t1seed + " " + t1;
+				document.getElementById("7away").innerHTML=t2seed+ " " + t2;
+				document.getElementById("7hscore").innerHTML=t1s;
+				document.getElementById("7ascore").innerHTML=t2s;
+				if(teams2){
+					document.getElementById("7home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+					document.getElementById("7away").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				}
+			}else if(bracketpos==8){
+				var gameid=game.gameID;
+				document.getElementById("8home").innerHTML=t1seed + " " + t1;
+				document.getElementById("8away").innerHTML=t2seed+ " " + t2;
+				document.getElementById("8hscore").innerHTML=t1s;
+				document.getElementById("8ascore").innerHTML=t2s;
+				if(teams2){
+					document.getElementById("8home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+					document.getElementById("8away").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				}
+			}else if(bracketpos==9){
+				var gameid=game.gameID;
+				document.getElementById("9home").innerHTML=t1seed + " " + t1;
+				document.getElementById("9away").innerHTML=t2seed+ " " + t2;
+				document.getElementById("9hscore").innerHTML=t1s;
+				document.getElementById("9ascore").innerHTML=t2s;
+				if(teams2){
+					document.getElementById("9home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+					document.getElementById("9away").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				}
+			}else if(bracketpos==10){
+				document.getElementById("10home").innerHTML=t1seed + " " + t1;
+				document.getElementById("10away").innerHTML=t2seed+ " " + t2;
+				document.getElementById("10hscore").innerHTML=t1s;
+				document.getElementById("10ascore").innerHTML=t2s;
+				if(teams2){
+					document.getElementById("10home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+					document.getElementById("10away").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				}
+			}else if(bracketpos==11){
+				var gameid=game.gameID;
+				document.getElementById("11home").innerHTML=t1seed + " " + t1;
+				document.getElementById("11away").innerHTML=t2seed+ " " + t2;
+				document.getElementById("11hscore").innerHTML=t1s;
+				document.getElementById("11ascore").innerHTML=t2s;
+				if(teams2){
+					document.getElementById("11home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+					document.getElementById("11away").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				}
+			}else if(bracketpos==12){
+				var gameid=game.gameID;
+				document.getElementById("12home").innerHTML=t1seed + " " + t1;
+				document.getElementById("12away").innerHTML=t2seed+ " " + t2;
+				document.getElementById("12hscore").innerHTML=t1s;
+				document.getElementById("12ascore").innerHTML=t2s;
+				if(teams2){
+					document.getElementById("12home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+					document.getElementById("12away").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				}
+			}else if(bracketpos==13){
+				var gameid=game.gameID;
+				document.getElementById("13home").innerHTML=t1seed + " " + t1;
+				document.getElementById("13away").innerHTML=t2seed+ " " + t2;
+				document.getElementById("13hscore").innerHTML=t1s;
+				document.getElementById("13ascore").innerHTML=t2s;
+				if(teams2){
+					document.getElementById("13home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+					document.getElementById("13away").parentNode.id=gameid+ " " + t1id + " " + t2id;
+				}
+			}else if(bracketpos==14){
+				var gameid=game.gameID;
+				document.getElementById("14home").innerHTML=t1seed + " " + t1;
+				document.getElementById("14away").innerHTML=t2seed+ " " + t2;
+				document.getElementById("14hscore").innerHTML=t1s;
+				document.getElementById("14ascore").innerHTML=t2s;
+				if(teams2){
+					document.getElementById("14home").parentNode.id=gameid+ " " + t1id + " " + t2id;
+					document.getElementById("14away").parentNode.id=gameid+ " " + t1id + " " + t2id;
 				}
 			}
-		});
+		}
 
-$('.game').on('click', function(e){
-	var object = this;
-	
-	var id = this.id
-	if(id != undefined){
-		var variables = id.split(" ");
-		if(variables.length==3 && variables[2] !="" && variables[1] !="" && variables[0] !=""){
-			game=variables[0];
+
+		$('.game').on('click', function(e){
+			var object = this;
+
+			var id = this.id
+			if(id != undefined){
+				var variables = id.split(" ");
+				if(variables.length==3 && variables[2] !="" && variables[1] !="" && variables[0] !=""){
+					game=variables[0];
+
+					hname="Team 1 Score";
+					aname="Team 2 Score";
+					document.getElementById("hometeamname").innerHTML=hname;
+					document.getElementById("awayteamname").innerHTML=aname;
+					$('#submitbutton').on('click', function(e){
+						e.preventDefault();
+						var gameid=variables[0];
+						var home_score=document.getElementById('h1s').value;
+						var away_score=document.getElementById('a1s').value;
+						if(home_score == "" || away_score==""){
+							alert("You must supply both scores.");
+						}
+						var obj=new Object();
+						obj.gameid=gameid;
+						obj.home_score=home_score;
+						obj.away_score=away_score;
+						var json = JSON.stringify(obj);
+						$.ajax('php/declareWinner.php',
+						{
+							type:"POST",
+							dataType: "json",
+							data: json,
+							success: function(json, status, jqXHR) {
+								var id = json.id;
+								var redirect = window.location; //reload
+								window.location=redirect;
+							},
+							error: function(jqXHR, status, error) {
+								alert(jqXHR.responseText);
+							}
+						});
+					});
+				}
+			}
 			
-			hname="Team 1 Score";
-			aname="Team 2 Score";
-			document.getElementById("hometeamname").innerHTML=hname;
-			document.getElementById("awayteamname").innerHTML=aname;
-			$('#submitbutton').on('click', function(e){
-				e.preventDefault();
-			var gameid=variables[0];
-			var home_score=document.getElementById('h1s').value;
-			var away_score=document.getElementById('a1s').value;
-			if(home_score == "" || away_score==""){
-				alert("You must supply both scores.");
-			}
-					var obj=new Object();
-		obj.gameid=gameid;
-		obj.home_score=home_score;
-		obj.away_score=away_score;
-		var json = JSON.stringify(obj);
-		$.ajax('php/declareWinner.php',
-		{
-			type:"POST",
-			dataType: "json",
-			data: json,
-			success: function(json, status, jqXHR) {
-				var id = json.id;
-				var redirect = window.location; //reload
-				window.location=redirect;
-			},
-			error: function(jqXHR, status, error) {
-				alert(jqXHR.responseText);
-			}
-		});
-		});
-	}else{
-		alert("undefinde");
-	}	
-}
 
-);
+		});
 
-});
+	});
