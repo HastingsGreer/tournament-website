@@ -6,7 +6,18 @@ $(document).ready(function(){
 	}
 	var link = 'getTournament.php?'+id_string;
 	var result = $.getJSON(link, function(json){
-		alert(json);
+		var name=json.name;
+		var numteams=json.numteams;
+		var numleagues=json.numleagues;
+		var teams = json.teams;
+		var games = json.games;
+		for(var leagues=0; leagues< games.length; leagues++){
+			for(var g=0; g<games['leagues'].length; j++){
+				alert(games[leagues][g].league_id);
+			}
+		}
+		
+
 	});
 
 });
