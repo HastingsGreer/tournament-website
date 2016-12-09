@@ -4,7 +4,7 @@ $(document).ready(function(){
 	if(id_string==""){
 		window.location="tournament_view.html";
 	}
-	var link = 'gameTournament.php?'+id_string;
+	var link = 'getTournament.php?'+id_string;
 	var result = $.getJSON(link, function(json){
 		alert(json);
 	});
