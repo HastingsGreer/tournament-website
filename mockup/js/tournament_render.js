@@ -280,7 +280,7 @@ $('.game').on('click', function(e){
 						obj.home_score=home_score;
 						obj.away_score=away_score;
 						var json = JSON.stringify(obj);
-						$.ajax('php/declareWinner.php',
+						$.ajax('php/declareWinner.php?gameid=' + gameid + "&home_score=" + home_score + "&away_score=" + away_score,
 						{
 							type:"POST",
 							dataType: "json",
