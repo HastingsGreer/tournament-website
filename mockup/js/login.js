@@ -7,7 +7,6 @@ $(document).ready(function(){
 			alert("Enter a password");
 		}else{
 			var email = document.getElementById("username").value;
-			alert(email);
 			var base_url = 'php'
 			$.ajax(
 				base_url + '/user.php/email/' + email,
@@ -17,7 +16,9 @@ $(document).ready(function(){
 				success: function (user_json, status, jqXHR) {
 					var u = new User(user_json);
 					var id = u.id;
-					alert(id);
+					cookie_text = "userid="+u.id+"; path=/";
+					cookie = document.cookie(cookie_text);
+					alert(cookie);
                 },
                 error: function () {
                 	document.getElementById('username_availabilty').innerHTML = "Username or Password Invalid";               
