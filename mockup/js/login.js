@@ -18,10 +18,11 @@ $(document).ready(function(){
 					var id = u.id;
 					cookie_text = "userid="+u.id+"; path=/";
 				    document.cookie = cookie_text;
-				    alert(document.cookie);
+				    var redirect="your_tournaments.html"
+				    window.location=redirect;
                 },
                 error: function () {
-                	document.getElementById('username_availabilty').innerHTML = "Username or Password Invalid";               
+                	document.getElementById('username_availabilty').innerHTML = "Username or Password Invalid. Try again.";               
                 }
             });
 		}
