@@ -42,7 +42,7 @@ var Tournament = function() {
 			success: function(json, status, jqXHR) {
 				var id = json.id;
 				var redirect = "tourneyView.html?id=" + id;
-				window.location="redirect";
+				window.location=redirect;
 			},
 			error: function(jqXHR, status, error) {
 				alert(jqXHR.responseText);
