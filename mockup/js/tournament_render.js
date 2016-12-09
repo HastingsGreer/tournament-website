@@ -16,6 +16,8 @@ $(document).ready(function(){
 		for(var idx = 0; idx < teams.length; idx++){
 			id2name[teams[idx].team_id] = teams[idx];
 		}
+
+
 		for(var leagueidx=0; leagueidx< games.leagues.length; leagueidx++){
 			
 			for(var g=0; g<games.leagues[leagueidx].games.length; g++){
@@ -72,7 +74,6 @@ $(document).ready(function(){
 		}
 
 		for(var i=0; i< bracket.length; i++){
-			alert(bracket.length);
 			var game=bracket[i];
 			if(game.team1!=0){
 				var t1=id2name[game.team1].team_name;
@@ -94,7 +95,7 @@ $(document).ready(function(){
 			}
 
 			var bracketpos = game.bracket_position;
-			alert(bracketpos);
+			alert(bracketpos + " " + bracket.length);
 			if(bracketpos==0){
 				document.getElementById("0home").innerHTML=t1seed + " " + t1;
 				document.getElementById("0away").innerHTML=t2seed+ " " + t2;
