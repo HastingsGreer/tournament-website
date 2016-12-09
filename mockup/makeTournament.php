@@ -1,4 +1,7 @@
 <?php
+#ini_set('display_errors', 1);
+#ini_set('display_startup_errors', 1);
+#error_reporting(E_ALL);
 $json = file_get_contents('php://input'); $obj = json_decode($json);
 #echo "\n" . $json . "\n";
 $mysqli = mysqli_connect("classroom.cs.unc.edu", "tgreer", "horsejump5678", "tgreerdb");
@@ -14,6 +17,10 @@ $tourneyID = mysqli_query($mysqli, "SELECT id FROM tournament WHERE name = '" . 
 #echo $tourneyID . "\n";
 
 
+mysqli_query($mysqli, "INSERT INTO user_tournament_junction 
+                       (userID, tournamentID) 
+		       VALUES 
+		       ('" . $obj->userid . "','" . $tourneyID . "')");
 
 $leagues = array();
 for($i = 0; $i < $obj->numleagues; $i = $i + 1){
@@ -54,39 +61,19 @@ foreach($leagues as $league) {
            if(intval($id1) < intval($id2)){
                #echo $id1 . $id2 . "\n";
                 
-               mysqli_query($mysqli, "INSERT INTO game (away_team, home_team, is_bracket_game) VALUES ( '" . $id1 . "','". $id2 ."',false)");
+               mysqli_query($mysqli, "INSERT INTO game (away_team, home_team, is_bracket_game, tournamentID) VALUES ( '" . $id1 . "','". $id2 ."',false, '".$tourneyID."')");
            }    
        }
     }
     
 
 }
-echo $tourneyID;
-$games = (object) array("leagues" => $leagues,
-                        "bracket" => array());
-$tournament1 = (object) array(
-                              'numteams'=> 16,
-                              'numleagues'=> 4,
-                              'in_bracket_play' => false,
-                              'tournament_style' => 'round_robin',
-			      'teams' => $teams,
-			      'games' => $games,
-			      );
+echo json_encode((object) array("id"=> $tourneyID));
+#generate bracket games
 
-
-
-
-$tournament2 = (object) array('tournament' => 'UNC basketball Intramurals 2016',
-                              'tournament_id' => '1235',
-                              'tournament_day' => '12-23-16');
-if($id == 1234){
-    #echo json_encode($tournament1);
-} else {
-    if($id == 1235){
-        #echo json_encode($tournament2);
-    } else {
-        #echo json_encode(null);
-    }
+for($i = 0; $i < $obj->numteams - 1; $i = $i + 1){
+    
+               mysqli_query($mysqli, "INSERT INTO game (bracket_position, is_bracket_game, tournamentID) VALUES ( '" . $i. "', true, '" . $tourneyID . "')");
 }
 ?>
 
