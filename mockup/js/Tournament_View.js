@@ -20,7 +20,7 @@ var Tournament_View = function(){
 	if(user_id != null){
 	var url = 'php/listTournament.php/' + userid;
 	}else{
-	var url = 'php/listTournament.php/'	
+	var url = 'php/listTournament.php/';	
 	}
 	var getTournamentNames = $.getJSON(url, function(json) {
 		tournament_section.innerHTML="";
