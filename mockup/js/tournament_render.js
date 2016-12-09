@@ -28,7 +28,7 @@ $(document).ready(function(){
 				var tr=document.createElement("tr");
 				var th=document.createElement("th");
 				th.innerHTML="Game: "+game.gameID;
-				tr.appendChild(th);
+				
 				var h= document.createElement("tr");
 				var h1n=document.createElement("th");
 				h1n.innerHTML= t1name;
@@ -41,7 +41,7 @@ $(document).ready(function(){
 				a1n.innerHTML=t2name;
 				var a1s = document.createElement("th");
 				a1s.innerHTML=t2score;
-				
+				tr.appendChild(th);
 
 				document.getElementById("pool_container").innerHTML=t2name;
 				
