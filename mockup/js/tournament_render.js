@@ -253,7 +253,6 @@ $(document).ready(function(){
 					}
 				}
 			}
-		
 	});
 
 $('.game').on('click', function(e){
