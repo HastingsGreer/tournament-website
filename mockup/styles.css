@@ -37,6 +37,18 @@ body{
     padding: 15px 15px 15px 15px;
 }
 
+#buttonSection
+{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    
+}
+
 #title{
     font-family: 'Maiden Orange', cursive;
     font-size: 4em;
