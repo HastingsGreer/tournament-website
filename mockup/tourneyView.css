@@ -66,13 +66,14 @@ li.game{
 th{
     background-color:#d9b310;
     margin: 15px;
-    width: 200px;
+    width: 300px;
 }
 
 .homename, .awayname{
   color:white;
   font-size:20px;
 }
-tr{
+#pool_view tr{
   border: thick white;
+  padding: 15px 15px 15px 15px;
 }
