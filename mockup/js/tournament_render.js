@@ -100,7 +100,6 @@ $(document).ready(function(){
 			}
 
 			var bracketpos = game.bracket_position;
-			alert(bracketpos + " " + bracket.length);
 			if(bracketpos==0){
 				var gameid=game.gameID;
 				document.getElementById("0home").innerHTML=t1seed + " " + t1;
@@ -226,5 +225,12 @@ $(document).ready(function(){
 		
 
 	});
+
 	
+	$(".game").on('click', function(e){
+		var object = this;
+		alert(this.id);
+	}
+
+	}
 });
