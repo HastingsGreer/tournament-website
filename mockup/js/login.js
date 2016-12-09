@@ -17,8 +17,8 @@ $(document).ready(function(){
 					var u = new User(user_json);
 					var id = u.id;
 					cookie_text = "userid="+u.id+"; path=/";
-					cookie = document.cookie(cookie_text);
-					alert(cookie);
+				    document.cookie = cookie_text;
+				    alert(document.cookie);
                 },
                 error: function () {
                 	document.getElementById('username_availabilty').innerHTML = "Username or Password Invalid";               
