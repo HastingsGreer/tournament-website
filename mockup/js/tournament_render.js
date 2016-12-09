@@ -52,7 +52,7 @@ $(document).ready(function(){
 				var brk = document.createElement("br");
 				tr.appendChild(brk);
 
-				$("#pool_container").append(tr.innerHTML);
+				$("#pool_container").append(tr);
 				
 			}
 		}
