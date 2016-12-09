@@ -4,6 +4,7 @@
 main{
   display:flex;
   flex-direction:row;
+  text-size:16px;
 }
 .round{
   display:flex;
