@@ -73,7 +73,9 @@ $(document).ready(function(){
 		}
 
 		for(var i=0; i< bracket.length; i++){
-			var t1=id2name[bracket[i].team1].team_name;
+			var game=bracket[i];
+			var t1=id2name[game.team1].team_name;
+			alert(t1);
 			var t1seed=id2name[bracket[i].team1].seed;
 			var t1s=bracket[i].team1Score;
 			var t2=id2name[bracket[i].team2].team_name;
