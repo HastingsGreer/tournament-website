@@ -22,8 +22,8 @@
 	background: white;
 	width: 200px;
 	height: 200px;
-	border: thin black;
-	text-align: center;
+	border: thin #d9b310;
+	vertical-align: middle;
 	display: inline-block;
 
 }
