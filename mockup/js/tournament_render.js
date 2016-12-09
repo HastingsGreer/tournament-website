@@ -261,7 +261,7 @@ $('.game').on('click', function(e){
 	var id = this.id
 	if(id != undefined){
 		var variables = id.split(" ");
-		alert(variables);
+		alert(variables.length);
 		if(variables.lengh==3 && variables[2] !="" && variables[1] !="" && variable[0] !=""){
 			game=variables[0];
 			hname=id2name[variables[2]].team_name;
@@ -269,7 +269,7 @@ $('.game').on('click', function(e){
 			document.getElementById("hometeamname").innerHTML=hname;
 			document.getElementById("awayteamname").innerHTML=aname;
 			alert("hname");
-			//var modal = document.getElementById('id01');
+			var modal = document.getElementById('id01');
 
 		}
 	}else{
