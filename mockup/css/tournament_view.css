@@ -23,7 +23,7 @@
 	width: 200px;
 	height: 200px;
 	border: thin #d9b310;
-	text-align: middle;
+	vertical-align: middle;
 	display: inline-block;
 
 }
