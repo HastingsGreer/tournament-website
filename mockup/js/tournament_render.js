@@ -36,6 +36,7 @@ $(document).ready(function(){
 				h1s.innerHTML=t1score;
 				h.appendChild(h1n);
 				h.appendChild(h1s);
+				th.appendChild(h);
 				//h1s.appendTo(h1n);
 				var a = document.createElement("tr");
 				var a1n =document.createElement("th");
@@ -44,6 +45,7 @@ $(document).ready(function(){
 				a1s.innerHTML=t2score;
 				a.appendChild(a1n);
 				a.appendChild(a1s);
+				th.append(a);
 				tr.appendChild(th);
 
 				$("#pool_container").append(tr.innerHTML);
