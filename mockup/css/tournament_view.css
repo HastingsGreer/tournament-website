@@ -13,9 +13,8 @@
 	width: 2000px;
 	height: 800px;
 	overflow-y: scroll;
-	display: inline-block;
 	margin:0 auto;
-	float: left;
+
 }
 .tournament_card{
 	margin: 1em;
@@ -25,4 +24,5 @@
 	height: 200px;
 	border: thin black;
 	text-align: center;
+	display: inline-block;
 }
