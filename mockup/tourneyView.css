@@ -43,7 +43,7 @@ li.game{
   li.game-top{ border-bottom:1px solid #aaa; }
   li.game-spacer{ 
     border-right:1px solid #aaa;
-    min-height:40px;
+    min-height:45px;
   }
   li.game-bottom{ 
     border-top:1px solid #aaa;
