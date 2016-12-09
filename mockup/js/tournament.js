@@ -8,6 +8,20 @@ var Tournament = function() {
 			document.getElementById('team_name_area').innerHTML += text;
 		}
 	}
+	function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+}
 
 	$('#submitbutton').click(function(e){
 		e.preventDefault();
@@ -32,6 +46,7 @@ var Tournament = function() {
 		obj.tournament_style="round_robin";
 		obj.min_rest_time="1:00:00";
 		obj.teams=teams;
+		obj.userid=getcookie("userid");
 
 		var json = JSON.stringify(obj);
 		alert(json);
