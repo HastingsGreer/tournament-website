@@ -15,6 +15,7 @@ if (isset($_REQUEST['userid'])) {
 		while($row = $result->fetch_assoc()) {
 			$total['tournament'][] =$row;
 		}
+		echo json_encode($total);
 	}else{
 		echo "No Tournaments";
 	}
@@ -29,6 +30,7 @@ if (isset($_REQUEST['userid'])) {
 
 			$total['tournament'][] =$row;
 		}
+		echo json_encode($total);
 	} else {
 		echo "0 results";
 	}
