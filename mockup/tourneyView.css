@@ -65,7 +65,11 @@ li.game{
 
 th{
     background-color:#d9b310;
-    color: white;
     margin: 15px;
     width: 200px;
+}
+
+.homename, .awayname{
+  color:white;
+  font-size:20px;
 }
