@@ -39,10 +39,10 @@ $(document).ready(function(){
 				var gamebox = document.createElement("table");
 				gamebox.className="gamebox";
 				var tr=document.createElement("tr");
-				tr.className +=" game ";
+				tr.className ="game";
 				tr.id = gameid+" "+ t1 + " "+ t2;
 				var th=document.createElement("th");
-				th.className +=" game ";
+				th.className ="game";
 				th.id =  gameid+" "+ t1 + " "+ t2;
 				var stuff = document.createElement('td');
 				stuff.className="gamenum";
@@ -50,7 +50,7 @@ $(document).ready(function(){
 				stuff.innerHTML=gn;
 				th.appendChild(stuff);
 				var h= document.createElement("tr");
-				h.className +=" game ";
+				h.className ="game";
 				h.id = gameid+" "+ t1 + " "+ t2;
 				var h1n=document.createElement("th");
 				h1n.className="homename";
@@ -63,7 +63,7 @@ $(document).ready(function(){
 				th.appendChild(h);
 				//h1s.appendTo(h1n);
 				var a = document.createElement("tr");
-				a.className +=" game ";
+				a.className ="game";
 				a.id =  gameid+" "+ t1 + " "+ t2;
 				var a1n =document.createElement("th");
 				a1n.className+="awayname";
@@ -78,7 +78,7 @@ $(document).ready(function(){
 				tr.appendChild(th);
 				var brk = document.createElement("br");
 				tr.appendChild(brk);
-				tr.className +=" game ";
+				tr.className ="game";
 				tr.id = gameid+" "+ t1 + " "+ t2; 
 
 				$("#pool_container").append(tr);
