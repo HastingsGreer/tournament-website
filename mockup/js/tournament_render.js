@@ -11,6 +11,7 @@ $(document).ready(function(){
 		var numleagues=json.numleagues;
 		var teams = json.teams;
 		var games = json.games;
+		alert(games.length);
 		for(var leagues=0; leagues< games.length; leagues++){
 			alert(leagues);
 			for(var g=0; g<games['leagues'].length; g++){
