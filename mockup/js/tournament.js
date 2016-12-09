@@ -34,6 +34,7 @@ var Tournament = function() {
 		obj.teams=teams;
 
 		var json = JSON.stringify(obj);
+		alert(json);
 		$.ajax('makeTournament.php',
 		{
 			type:"POST",
