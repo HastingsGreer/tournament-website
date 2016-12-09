@@ -263,13 +263,38 @@ $('.game').on('click', function(e){
 		var variables = id.split(" ");
 		if(variables.length==3 && variables[2] !="" && variables[1] !="" && variables[0] !=""){
 			game=variables[0];
+			
 			hname="Team 1 Score";
 			aname="Team 2 Score";
 			document.getElementById("hometeamname").innerHTML=hname;
 			document.getElementById("awayteamname").innerHTML=aname;
 			$('#submitbutton').on('click', function(e){
-				alert("submit");
-			});
+				e.preventDefault();
+			var gameid=variables[0];
+			var home_score=document.getElementById('h1s').value;
+			var away_score=document.getElementById('a1s').value;
+			if(home_score == "" || away_score==""){
+				alert("You must supply both scores.");
+			}
+					var obj=new Object();
+		obj.gameid=gameid;
+		obj.home_score=home_score;
+		obj.away_score=away_score;
+		var json = JSON.stringify(obj);
+		$.ajax('php/declareWinner.php',
+		{
+			type:"POST",
+			dataType: "json",
+			data: json,
+			success: function(json, status, jqXHR) {
+				var id = json.id;
+				var redirect = window.location; //reload
+				window.location=redirect;
+			},
+			error: function(jqXHR, status, error) {
+				alert(jqXHR.responseText);
+			}
+		});
 		}
 	}else{
 		alert("undefinde");
