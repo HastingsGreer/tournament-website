@@ -229,7 +229,10 @@ $(document).ready(function(){
 
 	$('.game').on('click', function(e){
 		var object = this;
-		alert(this.id);
+		var id = this.id
+		
+		var variables = id.split(" ");
+		alert(variables.length);
 	}
 		);
 	
