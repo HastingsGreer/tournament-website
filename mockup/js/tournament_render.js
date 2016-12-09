@@ -228,7 +228,8 @@ $(document).ready(function(){
 	});
 
 	$('.game').on('click', function(e){
-		alert('clicked');
+		var object = this;
+		alert(this.id);
 	}
 		);
 	
