@@ -74,13 +74,25 @@ $(document).ready(function(){
 
 		for(var i=0; i< bracket.length; i++){
 			var game=bracket[i];
-			var t1=id2name[game.team1].team_name;
-			alert(t1);
-			var t1seed=id2name[game.team1].seed;
-			var t1s=bracket[i].team1Score;
-			var t2=id2name[game.team2].team_name;
-			var t2s=bracket[i].team2Score;
-			var t2seed=id2name[game.team2].seed;
+			if(game.team1!=0){
+				var t1=id2name[game.team1].team_name;
+				var t1seed=id2name[game.team1].seed;
+				var t1s=bracket[i].team1Score;
+			}else{
+				var t1=" ";
+				var t1seed=" ";
+				var t1s=" ";
+			}
+			if(game.team2 !=0){
+				var t2=id2name[game.team2].team_name;
+				var t2s=bracket[i].team2Score;
+				var t2seed=id2name[game.team2].seed;
+			}else{
+				var t2=" ";
+				var t2s=" ";
+				var t2seed=" ";
+			}
+
 			var bracketpos = game.bracket_position;
 			if(bracketpos==7){
 				$("#7home").innerHTML=t1seed + " " + t1;
