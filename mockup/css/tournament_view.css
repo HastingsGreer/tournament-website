@@ -15,7 +15,7 @@
 	align-content: center;
 	height: 800px;
 	overflow-y: scroll;
-	width: 100%;
+	width: 1000;
 	display: table-cell;
 	margin:0 auto;
 }
