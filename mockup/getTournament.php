@@ -1,19 +1,28 @@
 <?php
 header('Content-Type: application/json');
 $id = intval($_GET['id']);
+echo $id;
+$mysqli = mysqli_connect("classroom.cs.unc.edu", "tgreer", "horsejump5678", "tgreerdb");
+$teamtable = mysqli_query($mysqli, "SELECT id, name, poolID, seed FROM team WHERE tournamentID = " . $id );
+
+
 $teams = array();
-$teamnames = ['Broncos', 'Bulls', 'Wingnuts', 'Gamecocks', 'Ampersands', 'xss', 'tar heels', 'snoot boopers', 'fly balls', 'team chaos', 'cow tippers', 'crazy 8s', 'ballers', 'robots', 'cat-people', 'brainsuckers'];
-$i = 1000;
-foreach($teamnames as $name) {
-    $teams[] = (object) array("team_name" => $name,
-                              "team_id" => $i,
-			      "team_league" => $i%4,
-			      "seed" => null);
-    $i += 1;
+while($team = $teamtable->fetch_row()) {
+    $teams[] = (object) array("team_name" => $team[1],
+                              "team_id" => $team[0],
+			      "team_league" => $team[2],
+			      "seed" => $team[3]);
+    
 }
+#var_dump($teams);
+
+
+$leaguetable = mysqli_query($mysqli, "SELECT ID, name, FROM pool WHERE tournamentID = " . $id );
+
 $leagues = array();
-foreach([0, 1, 2, 3] as $leagueid) {
-    $league = array("league_id" => $leagueid);
+while($pool = $leaguetable->fetch_row() {   
+    $league = array("league_id" => $pool[0],
+                    "league_name" => $pool[1]);
     $lteams = array();
     foreach($teams as $t){
         if($t->team_league == $leagueid){
@@ -21,7 +30,6 @@ foreach([0, 1, 2, 3] as $leagueid) {
 	}
     }
     $league["teams_in_league"] = $lteams;
-    foreach($lteams as id1){
 
     $leagues[] = $league;
 
