@@ -63,7 +63,7 @@ li.game{
     text-align:left;
 }
 
-#homename{
+.homename{
     background-color:#d9b310;
     color: white;
 }
