@@ -268,7 +268,8 @@ $('.game').on('click', function(e){
 			document.getElementById("hometeamname").innerHTML=hname;
 			document.getElementById("awayteamname").innerHTML=aname;
 			alert("hname");
-			var modal = document.getElementById('id01');
+			var mod = document.getElementById('id01');
+			alert(mod);
 		}
 	}else{
 		alert("undefinde");
