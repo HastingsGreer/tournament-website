@@ -94,11 +94,13 @@ $(document).ready(function(){
 			}
 
 			var bracketpos = game.bracket_position;
+			alert(bracketpos);
 			if(bracketpos==7){
-				$("#7home").innerHTML=t1seed + " " + t1;
-				$("#7away").innerHTML=t2seed+ " " + t2;
-				$("7hscore").innerHTML=t1s;
-				$("#7ascore").innerHTML=t2s;
+				alert("Should see a change.");
+				document.getElementById("7home").innerHTML=t1seed + " " + t1;
+				document.getElementById("7away").innerHTML=t2seed+ " " + t2;
+				document.getElementById("7hscore").innerHTML=t1s;
+				document.getElementById("7ascore").innerHTML=t2s;
 			}
 
 		}
