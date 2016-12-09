@@ -1,8 +1,9 @@
 <?php
 $json = file_get_contents('php://input'); $obj = json_decode($json);
 
+echo "d". $obj->tournament_style . "77\n";
 
-$id = intval($_GET['id']);
+$id = intval(1234);
 $teams = array();
 $teamnames = ['Broncos', 'Bulls', 'Wingnuts', 'Gamecocks', 'Ampersands', 'xss', 'tar heels', 'snoot boopers', 'fly balls', 'team chaos', 'cow tippers', 'crazy 8s', 'ballers', 'robots', 'cat-people', 'brainsuckers'];
 $i = 1000;
@@ -23,8 +24,8 @@ foreach([0, 1, 2, 3] as $leagueid) {
 	}
     }
     $league["teams_in_league"] = $lteams;
-    foreach($lteams as id1){
-
+    foreach($lteams as $id1) {
+    }
     $leagues[] = $league;
 
 }

@@ -10,7 +10,6 @@ class Tournament
 {
     private $id;
     private $name;
-    private $league_id;
     private $num_teams;
     private $start_date;
     private $end_date;
@@ -22,7 +21,7 @@ class Tournament
         //return new mysqli("localhost", "root", "", "tournament");
     }
 
-    public static function create($name, $league_id, $num_teams, $start_date, $end_date)
+    public static function create($name, $num_teams, $start_date, $end_date)
     {
         $mysqli = Tournament::connect();
         if($start_date == null){
@@ -36,22 +35,21 @@ class Tournament
             $edstr = "'" . $end_date->format('Y-m-d') . "'";
         }
 
-        $result = $mysqli->query("INSERT INTO tournament(name,league_id,num_teams,start_date,end_date) VALUE( " . "'" . $mysqli->real_escape_string($name) . "', "
-            . "'" . $league_id . "', " . "'" . $num_teams . "', " . "'" . $sdstr . "', "
+        $result = $mysqli->query("INSERT INTO tournament(name,num_teams,start_date,end_date) VALUE( " . "'" . $mysqli->real_escape_string($name) . "', "
+            . "'". $num_teams . "', " . "'" . $sdstr . "', "
             . "'" . $edstr . "') ");
 
         if ($result) {
             $id = $mysqli->insert_id;
-            return new Tournament($id, $name, $league_id, $num_teams, $start_date, $end_date);
+            return new Tournament($id, $name,  $num_teams, $start_date, $end_date);
         }
         return null;
     }
 
-    private function __construct($id, $name, $league_id, $num_teams, $start_date, $end_date)
+    private function __construct($id, $name,  $num_teams, $start_date, $end_date)
     {
         $this->id = $id;
         $this->name = $name;
-        $this->league_id = $league_id;
         $this->num_teams = $num_teams;
         $this->start_date = $start_date;
         $this->end_date = $end_date;
@@ -79,7 +77,7 @@ class Tournament
                 $end_date = null;
             }
 
-            return new Tournament($tournament_info['id'], $tournament_info['name'], $tournament_info['league_id'], $tournament_info['num_teams'], $tournament_info['start_date'], $tournament_info['end_date']);
+            return new Tournament($tournament_info['id'], $tournament_info['name'], $tournament_info['num_teams'], $tournament_info['start_date'], $tournament_info['end_date']);
         }
         return null;
     }
@@ -110,10 +108,6 @@ class Tournament
         return $this->name;
     }
 
-    public function getLeagueID()
-    {
-        return $this->league_id;
-    }
 
     public function getNumTeams()
     {
@@ -134,12 +128,6 @@ class Tournament
     public function setName($name)
     {
         $this->name = $name;
-        return $this->update();
-    }
-
-    public function setLeagueID($league_id)
-    {
-        $this->league_id = $league_id;
         return $this->update();
     }
 
@@ -177,8 +165,6 @@ class Tournament
         $result = $mysqli->query("UPDATE tournament set " .
             "name=" .
             "'" . $mysqli->real_escape_string($this->name) . "', " .
-            "league_id=" .
-            "'" . $this->league_id . "', " .
             "num_teams=" .
             "'" . $this->num_teams . "', " .
             "start_date=" .
