@@ -25,6 +25,23 @@ $(document).ready(function(){
 				var t2name=id2name[t2].team_name;
 				var t1score=game.team1Score;
 				var t2score=game.team2Score;
+				var tr=document.createElement("tr");
+				var th=document.createElement("th");
+				th.innerHTML="Game: "+gameID;
+				tr.appendChild(th);
+				var h= document.createElement("tr");
+				var h1n=document.createElement("th");
+				h1n.innerHTML= t1name;
+				var h1s=document.createElement("th");
+				h1s.innerHTML=t1score;
+				h.appendChild(h1n);
+				h.appendChild(h1s);
+				//h1s.appendTo(h1n);
+				var a1n =document.createElement("th");
+				a1n.innerHTML=t2name;
+				var a1s = document.createElement("th");
+				a1s.innerHTML=t2score;
+				
 
 				document.getElementById("pool_container").innerHTML=t2name;
 				
