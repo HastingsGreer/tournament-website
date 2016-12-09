@@ -65,9 +65,11 @@ $(document).ready(function(){
 				a.appendChild(a1n);
 				a.appendChild(a1s);
 				th.appendChild(a);
+				th.className +=" game";
 				tr.appendChild(th);
 				var brk = document.createElement("br");
 				tr.appendChild(brk);
+				tr.className +=" game";
 
 				$("#pool_container").append(tr);
 				
@@ -291,7 +293,7 @@ $('.game').on('click', function(e){
 								window.location=redirect;
 							},
 							error: function(jqXHR, status, error) {
-								alert(jqXHR.responseText);
+								//alert(jqXHR.responseText);
 							}
 						});
 					});
