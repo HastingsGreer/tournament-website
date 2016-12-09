@@ -24,7 +24,13 @@ $(document).ready(function(){
 				var t2=game.team2;
 				var t2name=id2name[t2].team_name;
 				var t1score=game.team1Score;
+				if(t1score==null){
+					t1score="--";
+				}
 				var t2score=game.team2Score;
+				if(t2score==null){
+					t2score="--";
+				}
 				var tr=document.createElement("tr");
 				var th=document.createElement("th");
 				var stuff = document.createElement('td');
