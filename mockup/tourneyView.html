@@ -1,8 +1,9 @@
 
-
 <link rel="stylesheet" type="text/css" href="tourneyView.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
 <link href="https://fonts.googleapis.com/css?family=Maiden+Orange" rel="stylesheet">
-<h1>Your Tournament</h1>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<h1 id="title">Your Tournament</h1>
 <main id="tournament">
 	<ul class="round round-1">
 		<li class="spacer">&nbsp;</li>
@@ -10,49 +11,41 @@
 		<li class="game game-top winner"><span id=7home>1. Dunk It Like It's Hot</span> <span class="score">79</span></li>
 		<li class="game game-spacer">&nbsp;</li>
         <li class="game game-bottom "><span id=7away>8. Ball is Life</span> <span class ="score">48</span></li>
-
 		<li class="spacer">&nbsp;</li>
 		
 		<li class="game game-top winner"><span id=8home>3. Acca Ballers</span> <span class = "score">84</span></li>
 		<li class="game game-spacer">&nbsp;</li>
 		<li class="game game-bottom "><span id=8away>6. PJ Was the Rage</span> <span class="score">72</span></li>
-
 		<li class="spacer">&nbsp;</li>
 		
 		<li class="game game-top "><span id=9home>4. Ballin' On a Budget</span> <span class="score">55</span></li>
 		<li class="game game-spacer">&nbsp;</li>
 		<li class="game game-bottom winner"><span id=9away>5. Hoop There It Is</span> <span class ="score">68</span></li>
-
 		<li class="spacer">&nbsp;</li>
 		
 		<li class="game game-top winner"><span id=10home>2. Do the John Wall</span> <span class="score">64</span></li>
 		<li class="game game-spacer">&nbsp;</li>
 		<li class="game game-bottom "><span id=10away>7. J's On My Feet </span><span class="score">44</span></li>
-
 		<li class="spacer">&nbsp;</li>
 		
 		<li class="game game-top winner"><span id=11home>1. Toon Squad </span><span class="score">54</span></li>
 		<li class="game game-spacer">&nbsp;</li>
 		<li class="game game-bottom "><span id=11away>8. Wanna Be Like Mike</span> <span class="score">52</span></li>
-
 		<li class="spacer">&nbsp;</li>
 		
 		<li class="game game-top winner"><span id=12home>3. Air Buds</span> <span class="score">65</span></li>
 		<li class="game game-spacer">&nbsp;</li>
 		<li class="game game-bottom "><span id=12away>6. Jump Ballers</span> <span class="score">54</span></li>
-
 		<li class="spacer">&nbsp;</li>
 		
 		<li class="game game-top winner"><span id=13home>4. Marcus is Our Spirit Animal</span> <span class="score">67</span></li>
 		<li class="game game-spacer">&nbsp;</li>
 		<li class="game game-bottom "><span id=13away>5. Make It Rain</span> <span class="score">63</span></li>
-
 		<li class="spacer">&nbsp;</li>
 		
 		<li class="game game-top winner"><span id=14home>2. All Americans </span><span class="score">73</span></li>
 		<li class="game game-spacer">&nbsp;</li>
 		<li class="game game-bottom "><span id=14away>7. We Will Rock You</span> <span class="score">61</span></li>
-
 		<li class="spacer">&nbsp;</li>
 	</ul>
 	<ul class="round round-2">
@@ -61,25 +54,21 @@
 		<li class="game game-top winner"><span id=3home></span> <span class="score">82</span></li>
 		<li class="game game-spacer">&nbsp;</li>
 		<li class="game game-bottom "><span id=3away></span> <span class="score">56</span></li>
-
 		<li class="spacer">&nbsp;</li>
 		
 		<li class="game game-top winner"><span id=4home></span> <span class="score">74</span></li>
 		<li class="game game-spacer">&nbsp;</li>
 		<li class="game game-bottom "><span id=4away></span> <span class="score">57</span></li>
-
 		<li class="spacer">&nbsp;</li>
 		
 		<li class="game game-top "><span id=5home></span> <span class="score">48</span></li>
 		<li class="game game-spacer">&nbsp;</li>
 		<li class="game game-bottom winner"><span id=5away></span> <span class="score">70</span></li>
-
 		<li class="spacer">&nbsp;</li>
 		
 		<li class="game game-top "><span id=6home></span> <span class="score">50</span></li>
 		<li class="game game-spacer">&nbsp;</li>
 		<li class="game game-bottom winner"><span id=6away></span> <span class="score">66</span></li>
-
 		<li class="spacer">&nbsp;</li>
 	</ul>
 	<ul class="round round-3">
@@ -88,13 +77,11 @@
 		<li class="game game-top winner"><span id=1home></span> <span class="score">77</span></li>
 		<li class="game game-spacer">&nbsp;</li>
 		<li class="game game-bottom "><span id=1away></span> <span class="score">69</span></li>
-
 		<li class="spacer">&nbsp;</li>
 		
 		<li class="game game-top "><span id=2home></span> <span class="score">61</span></li>
 		<li class="game game-spacer">&nbsp;</li>
 		<li class="game game-bottom winner"><span id=2away></span> <span class="score">71</span></li>
-
 		<li class="spacer">&nbsp;</li>
 	</ul>
 	<ul class="round round-4">
@@ -107,3 +94,47 @@
 		<li class="spacer">&nbsp;</li>
 	</ul>		
 </main>
+ 
+<table id=tourney_table_view>
+    <tr id=list_header><th>Game 1</th></tr>
+    <tr id="home">
+        <th id="home_name">Home team</th>
+        <th id="home_score">Score</th>
+    </tr>
+    <tr id="away">
+        <th id="away_name">Away team</th>
+        <th id="away_score">Away score</th>
+    </tr>
+</table>
+
+<script>
+var service = 'wwp.cs.unc.edu/Courses/426-f16/users/tgreer/getTournament.php?id=16';
+    $(document).ready(function)
+    {
+        jQuery.support.cors = true;
+        
+        $.ajax(
+        {
+            type: "GET",
+            url: service,
+            data: "{}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            cache: false,
+            success: function (data){
+                var trHTML = '';
+                $.each(data.teams, function(i, item){
+                         trHTML += '<tr><td>' + data.team_name[i] + '</td></tr>';
+        });
+        
+        $('#tourney_table_view').append(trHTML);
+        
+        },
+        
+        error: function (msg) {
+            
+            alert(msg.responseText);
+        }
+    });
+})
+</script>

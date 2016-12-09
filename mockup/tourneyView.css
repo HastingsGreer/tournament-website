@@ -5,7 +5,6 @@ main{
   display:flex;
   flex-direction:row;
 }
-
 .round{
   display:flex;
   flex-direction:column;
@@ -17,27 +16,22 @@ main{
   .round .spacer{ flex-grow:1; }
   .round .spacer:first-child,
   .round .spacer:last-child{ flex-grow:.5; }
-
   .round .game-spacer{
     flex-grow:1;
   }
-
 /*
  *  General Styles
 */
 body{
   font-family: 'Maiden Orange', cursive;
-  font-size:small;
   padding:10px;
   line-height:1.4em;
     color: #328cc1;
 background-color: #1d2731;
 }
-
 li.game{
   padding-left:20px;
 }
-
   li.game.winner{
     font-weight:bold;
       color: #d9b310;
@@ -46,14 +40,25 @@ li.game{
     float:right;
     margin-right:5px;
   }
-
   li.game-top{ border-bottom:1px solid #aaa; }
-
   li.game-spacer{ 
     border-right:1px solid #aaa;
     min-height:40px;
   }
-
   li.game-bottom{ 
     border-top:1px solid #aaa;
   }
+
+#tourney_table_view{
+    background-color:#d9b310;
+    width:400;
+    height:auto;
+    padding:10px 10px 10px 10px;
+    text-align:left;
+    font-size: 20px
+}
+#list_header{
+    font-size:25px;
+    width:100%;
+    text-align:left;
+}

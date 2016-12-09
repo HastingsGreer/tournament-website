@@ -34,19 +34,19 @@
       <div id="rules_list">
       
       </div>
+    
+    <script>
+    $(document).ready(function (){
+    $(document).on('click', 'a', function(event){
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 800);
+    });
+})
+    </script>
       
-    <div id="tournament_list">
-        <ol>
-            <li> <a href="tourney1.html"> UNC Club Volleyball 2016</a></li>
-            <li> <a href="tourney2.html"> UNC Club Frisbee 2016</a></li>
-        </ol>
-    </div>
-      
-      <div id="managed_tournament_list">
-        <ol>
-            <li> <a href="tourney1.html"> UNC Club Volleyball 2016</a></li>
-        </ol>
-      </div>
 
 </body>
 </html>
