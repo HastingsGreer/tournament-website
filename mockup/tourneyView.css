@@ -73,3 +73,6 @@ th{
   color:white;
   font-size:20px;
 }
+tr{
+  border: thick white;
+}
