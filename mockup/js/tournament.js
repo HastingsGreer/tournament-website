@@ -34,7 +34,7 @@ var Tournament = function() {
 		var start_date = document.getElementById('start_date').value;
 		var end_date = document.getElementById('end_date').value;
 		var numleagues = document.getElementById('numleagues').value;
-		var numteams = document.getElementById('numTeams').value;
+		var numteams = document.getElementById('numTeams').option:selected.text();
 
 		var obj=new Object();
 		obj.name=name;
