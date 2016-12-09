@@ -43,7 +43,7 @@ $(document).ready(function(){
 				a1s.innerHTML=t2score;
 				tr.appendChild(th);
 
-				document.getElementById("pool_container").innerHTML=t2name;
+				document.getElementById("pool_container").innerHTML=tr;
 				
 			}
 		}
